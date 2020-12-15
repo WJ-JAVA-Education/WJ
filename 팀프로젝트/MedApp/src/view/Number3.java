@@ -13,6 +13,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.sun.javafx.image.impl.ByteIndexed.Getter;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,6 +36,9 @@ public class Number3 implements Initializable {
     private ImageView add;
 
     @FXML
+    private ImageView add1;
+
+    @FXML
     private ImageView input;
 
     @FXML
@@ -42,9 +46,6 @@ public class Number3 implements Initializable {
 
     @FXML
     private ImageView ShelfLife;
-    
-    @FXML
-    private ImageView IntoMask;
 
     @FXML
     private JFXTextField SearchBox;
@@ -138,20 +139,31 @@ public class Number3 implements Initializable {
 			e.printStackTrace();
 		}
 		});
-    	
-    	IntoMask.setOnMouseClicked( evnet -> {
-		    // 원하는 실행문
-		   Stage stage = new Stage();
-		   String FXMLRout = "../view/Mask.fxml";
-		   try {
-			page.CreatePage(stage, FXMLRout);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		});
 
-    
+//    	add1.setOnMouseClicked( evnet -> {
+//    		Stage stage = new Stage();
+//    		String FXMLRout = "../view/HomePage.fxml";
+//    		try {
+//    			page.CreatePage(stage, FXMLRout);
+//    		} catch (IOException e) {
+//    			// TODO Auto-generated catch block
+//    			e.printStackTrace();
+//    		}
+//    	});
+
+    	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
+    		if(MouseEvent.getClickCount() == 2) {
+    			MOrV.setSearchText(SearchBox.getText());
+    			Stage stage = new Stage();
+    	  	   String FXMLRout = "../view/DBSearch.fxml";
+    	  	   try {
+    	 			page.CreatePage(stage, FXMLRout);
+    	 		} catch (IOException e) {
+    	 			// TODO Auto-generated catch block
+    	 			e.printStackTrace();
+    	 		}
+    		}
+    	});
 
     	SearchBox.setOnKeyPressed( new EventHandler<KeyEvent>() {
     		@Override

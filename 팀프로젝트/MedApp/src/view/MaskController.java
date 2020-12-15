@@ -45,9 +45,11 @@ public class MaskController implements Initializable {
 	    @FXML
 	    private TableColumn<Mask, Integer> tb_mStock;
 
+	    @FXML
+	    private JFXPasswordField RrnField2;
 
 	    @FXML
-	    private JFXPasswordField RrnField;
+	    private JFXTextField RrnField1;
 
 	    @FXML
 	    private JFXComboBox<String> MaskTypeComboBox;
@@ -87,19 +89,16 @@ public class MaskController implements Initializable {
 		DBConnect conn = new DBConnect();
 		Connection connect;
 		ResultSet rs;
+		
 		ObservableList<String> mList = FXCollections.observableArrayList("KF-94","KF-90","KF-80","KF-AD");
+		showMaskList();
+		getMaskList();
 		MaskTypeComboBox.setItems(mList);
-
 		if (mov.getManagerOrViewer() == 1) {
 			ManagerOrViewer1.setText("로그인 정보 : 관리자");
 		} else {
 			ManagerOrViewer1.setText("로그인 정보 : 열람자");
 		}
-		showMaskList();
-		getMaskList();
-		
-		
-		
 		
 	}
 
@@ -109,7 +108,6 @@ public class MaskController implements Initializable {
 		String sql = "SELECT * FROM Mask";
 
 		Statement stmt; // DB에 보낼 쿼리 객체. => SQL 문을 DB에 보냄. (객체 선언만)
-
 		ResultSet rs; // DB에서 받아오는 결과. (객체 선언만)
 
 		try {
@@ -117,7 +115,12 @@ public class MaskController implements Initializable {
 			rs = stmt.executeQuery(sql); // 접속 된 DB에서 쿼리를 실행하고 결과를 리턴 //
 
 			while (rs.next()) {
-				Mask mask = new Mask(rs.getString("KFType"), rs.getInt("Stock"));
+				Mask mask = new Mask(
+						rs.getString("KFType"), 
+						rs.getInt("Stock"),
+						rs.getString("RRnumber"), 
+						rs.getInt("count"));
+				
 				MaskList.add(mask);
 			}
 

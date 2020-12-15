@@ -53,7 +53,7 @@ public class CatalogController implements Initializable {
 	private TableColumn<Medicine, Integer> tbstock;
 	@FXML
 	private Label CatalogManager;
-	@FXML	
+	@FXML
 	private ButtonBar Catalogbtnbar;
 	@FXML
 	private Button CDelete;
