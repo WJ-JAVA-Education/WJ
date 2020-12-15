@@ -1,12 +1,4 @@
-CREATE TABLE Mask
-(
-    KFType    VARCHAR2(20)    NOT NULL, 
-    stock     NUMBER          NULL, 
-	RRnumber  VARCHAR (13)	  NOT NULL,
-	count	  NUMBER	  	  NULL
-    CONSTRAINT MASK_PK PRIMARY KEY (RRnumber)
-);
-INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000001',3);
+﻿INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000001',3);
 INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000002',2);
 INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000003',1);
 INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000004',3);
