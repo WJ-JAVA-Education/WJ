@@ -12,5 +12,5 @@ public class CPage {
 		Parent root = FXMLLoader.load(getClass().getResource(FXMLRout));
 		stage.setScene(new Scene(root));
 		stage.show();
-	}// 2020 12 07 ±èÅÂÇå
+	}
 }

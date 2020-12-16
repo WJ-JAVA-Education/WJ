@@ -33,7 +33,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <Button fx:id="btnFChooser" layoutX="245.0" layoutY="500.0" mnemonicParsing="false" onAction="#fileChoose" style="-fx-background-color: #ffcf68;" text="📁  이미지 추가" textFill="#206a5d" />
+      <Button fx:id="btnFChooser" layoutX="220.0" layoutY="481.0" mnemonicParsing="false" onAction="#fileChoose" style="-fx-background-color: #ffcf68;" text="📁  이미지 추가" textFill="#206a5d" />
       <VBox layoutX="414.0" layoutY="243.0" prefHeight="607.0" prefWidth="504.0" spacing="20.0">
          <children>
             <VBox>
@@ -118,11 +118,11 @@
             </VBox>
          </children>
       </VBox>
-      <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="-47.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/3Dlogo(hires).gif" />
          </image>
       </ImageView>
-      <Label fx:id="mov" layoutX="17.0" layoutY="54.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label fx:id="mov" layoutX="7.0" layoutY="3.0" prefHeight="25.0" prefWidth="167.0" />
    </children>
 </AnchorPane>

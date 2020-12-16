@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -42,12 +43,12 @@
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <Label layoutX="119.0" layoutY="53.0" text="Full name" textFill="#1b1c25">
+            <Label layoutX="119.0" layoutY="53.0" text="Name" textFill="#1b1c25">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="128.0" text="Email" textFill="#1b1c25">
+            <Label layoutX="120.0" layoutY="128.0" text="ID" textFill="#1b1c25">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -80,20 +81,21 @@
          </font>
       </Text>
       <Line endX="19.0" layoutX="1176.0" layoutY="956.0" smooth="false" startX="-100.0" stroke="#206a5d" strokeLineJoin="ROUND" />
-      <JFXButton fx:id="login" layoutX="74.0" layoutY="175.0" onAction="#goLogin" prefHeight="64.0" prefWidth="180.0" text="GO Login!" textFill="#1b1c25">
-         <font>
-            <Font name="System Bold Italic" size="26.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="47.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/png01.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="70.0" prefHeight="22.0" prefWidth="175.0" />
-      <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+      <Group layoutX="47.0" layoutY="175.0" />
+      <Label fx:id="ManagerOrViewer" layoutX="7.0" layoutY="3.0" prefHeight="22.0" prefWidth="175.0" />
+      <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="-47.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/croppedLogo.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="login" layoutX="370.0" layoutY="234.0" onAction="#goLogin" prefHeight="0.0" prefWidth="18.0" text="GO Login!" textFill="#1b1c25">
+         <font>
+            <Font name="System Bold Italic" size="1.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="1.0" fitWidth="37.0" layoutX="343.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/png01.png" />
          </image>
       </ImageView>
    </children>

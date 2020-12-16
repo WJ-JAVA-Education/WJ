@@ -1,7 +1,6 @@
 package model;
 
 public class Team01 {
-		//3개 필드변수
 	private String fullname;
 	private String password;
 	private String email;
