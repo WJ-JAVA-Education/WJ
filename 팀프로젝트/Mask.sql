@@ -1,44 +1,109 @@
-CREATE TABLE Maskstock
+CREATE TABLE Mask
 (
-    KFType      VARCHAR2(20)    NOT NULL, 
-    stock       NUMBER          NULL, 
-    CONSTRAINT MASK_PK PRIMARY KEY (KFType)
+    KFType    VARCHAR2(20)    NOT NULL, 
+    stock     NUMBER          NULL, 
+	RRnumber  VARCHAR (13)	  NOT NULL,
+	count	  NUMBER	  	  NULL
+    CONSTRAINT MASK_PK PRIMARY KEY (RRnumber)
 );
-
-INSERT INTO maskstock (KFType, stock) VALUES ('KF-94',320);
-INSERT INTO maskstock (KFType, stock) VALUES ('KF-90',282);
-INSERT INTO maskstock (KFType, stock) VALUES ('KF-80',343);
-INSERT INTO maskstock (KFType, stock) VALUES ('KF-AD',362);
-
-CREATE TABLE BuyingMask
-(
-    KFType2      VARCHAR2(20)    NOT NULL,
-    RRnumber    VARCHAR2(13)    NOT NULL,
-    available   NUMBER          NOT NULL
-    );
-
-
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '9412251234567', 2);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9412251234567', 2);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9412251234567', 2);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9412251234567', 2);
-
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '9312251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9312251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9312251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9312251234567', 1);
-
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '9412251234567', 0);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9412251234567', 0);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9412251234567', 0);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9412251234567', 0);
-
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '9612251234567', 3);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9612251234567', 3);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9612251234567', 3);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9612251234567', 3);
-
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '9712251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9712251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9712251234567', 1);
-INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9712251234567', 1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000001',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000002',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000003',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000004',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000005',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000006',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000007',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000008',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000009',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000010',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000011',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000012',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000013',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000014',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000015',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000016',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000017',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000018',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000019',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000020',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000021',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000022',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000023',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000024',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000025',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000026',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000027',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000028',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000029',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000030',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000031',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000032',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000033',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000034',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000035',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000036',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000037',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000038',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000039',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000040',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000041',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000042',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000043',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000044',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000045',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000046',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000047',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000048',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000049',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000050',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000051',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000052',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000053',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000054',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000055',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000056',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000057',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000058',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000059',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000060',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000061',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000062',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000063',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000064',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000065',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000066',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000067',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000068',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000069',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000070',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000071',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000072',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000073',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000074',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000075',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000076',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000077',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000078',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000079',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000080',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000081',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000082',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000083',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000084',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000085',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000086',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000087',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000088',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000089',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000090',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000091',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000092',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000093',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000094',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000095',1);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000096',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-94',35,'0000000000097',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-90',35,'0000000000098',3);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-80',35,'0000000000099',2);
+INSERT INTO Mask (KFType, stock, RRnumber, count) VALUES ('KF-AD',35,'0000000000100',2);
+																	  
