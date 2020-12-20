@@ -23,7 +23,7 @@ public class VariableExam {
 
 		num2 = 20;
 		num1 = 10;
-
+		
 		int result = num1 + num2;
 
 		System.out.println(num1);
