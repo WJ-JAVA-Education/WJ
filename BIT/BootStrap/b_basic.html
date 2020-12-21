@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- 컨테이너는 여백 -->
+    <!-- 몇가지 색깔은 저장되어 있다. -->
+    <!-- <div class="container">
+        <button class="btn btn-primary">버튼</button>
+        <button class="btn btn-success">버튼</button>
+        <button class="btn btn-danger">버튼</button>
+        <button class="btn btn-warning">버튼</button>
+        <button class="btn btn-info">버튼</button>
+        <button class="btn btn-light">버튼</button>
+    </div> -->
+    <!-- 글자색:text- 배경색:bg- -->
+    <!-- 마진,패딩: m- p- (0-5) -->
+    <!-- t 위 b 아래 ㅣ왼쪽 r오른쪽  -->
+    <!-- x 는 좌우,  y는 위 아래 -->
+    <!-- <div class="container">
+        <div class="p-5 my-5 bg-primary text-danger">.bg-primary</div>
+        <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+        <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+        <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+        <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+        <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+        <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+        <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+        <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+    </div> -->
+
+    <!-- <div class="containr">
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <p class="lead">
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, blanditiis.</p>
+    </div> -->
+    <!-- 텍스트 정렬 text-좌,우,가운데 -->
+    <!-- <div class="container">
+        <blockquote class="blockquote text-right">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+    </div> -->
+
+    <!-- 1.컨테이너 2.줄(row) 3.열(col) -->
+    <!-- 한줄 : 12등분-->
+    <!-- 열 -->
+    <!-- <div class="container">
+        <div class="row">            
+            <div class="col-lg-2 col-sm-6  bg-primary p-3 text-white">                
+                열 하나
+            </div>
+            <div class="col-lg-4 col-sm-6 bg-danger p-3 text-white">
+                열 둘
+            </div>
+            <div class="col-lg-4 col-sm-6  bg-warning p-3 text-white">
+                열 셋
+            </div>
+            <div class="col-lg-2 col-sm-6  bg-success p-3 text-white">
+                열 넷
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <!-- 첫번째 줄 -->
+        <div class="row">
+            <div class="col-12 col-md-8 bg-info">.col-12 .col-md-8</div>
+            <div class="col-6 col-md-4 bg-info">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- 둘째줄  작을때 6 6 6 md이상일때 4 4 4-->
+        <div class="row">
+            <div class="col-6 col-md-4 bg-danger">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bg-danger">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bg-danger">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- 셋째줄  절반 : 절반-->
+        <div class="row">
+            <div class="col-6 bg-secondary">.col-6</div>
+            <div class="col-6 bg-secondary">.col-6</div>
+        </div>
+    </div>
+
+
+    <div class="container bg-info">
+        <div class="row align-items-center" style="height: 30vh;">
+            <!-- 상하 정렬(좌우는 text-) -->
+            <div class="col align-self-end">1첫번째</div>
+            <div class="col">1두번째</div>
+            <div class="col align-self-start">1세번째</div>
+        </div>
+        <div class="row align-items-start bg-danger" style="height: 30vh;">
+            <!-- 상하 정렬(좌우는 text-) -->
+            <div class="col">2첫번째</div>
+            <div class="col align-self-center">2두번째</div>
+            <div class="col align-self-end">2세번째</div>
+        </div>
+        <div class="row align-items-end" style="height: 30vh;">
+            <!-- 상하 정렬(좌우는 text-) -->
+            <div class="col">3첫번째</div>
+            <div class="col align-self-center">3두번째</div>
+            <div class="col align-self-start">3세번째</div>
+        </div>
+    </div>
+
+
+    <!-- 부트스트랩 JS (1.제이쿼리, 2.번들) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
