@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class DBConnect {
 	private final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
 	private final String USER = "scott";
-	private final String PASSWRORD = "oracle";
+	private final String PASSWRORD = "tiger";
 
 	Connection conn = null;
 
