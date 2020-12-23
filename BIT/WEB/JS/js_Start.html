@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+</head>
+
+<body>
+    <h3>배열 만들기 </h3>
+    
+
+<script>
+    function ask(question, yes , no){
+        if (confirm(question)) yes()
+        else no();
+    }
+    
+    function question(){
+        confirm('동의 하십니까?');
+    }
+    function yes(){
+        alert('동의 하셨습니다');
+    }
+    function no(){
+        alert('취소 하셨습니다');
+    }
+    ask("동의하세요?",yes,no);
+    </script>
+
+
+<!-- <script>
+    function func(myCall){
+        alert(typeof(myCall));
+        x(myCall);
+    }
+
+    function myCall(){
+        console.log('myCall 호출');
+    }
+    func(myCall);
+    </script> -->
+
+    <!-- <script>
+        var plusTen = function () {
+            var num = prompt('숫자를 입력', '0');
+            alert(Number(num) + 10);
+        }
+        console.log(typeof(plusTen));
+        plusTen();
+    // var go = confirm("계속 진행하시겠습니까?");
+    </script> -->
+    <!-- <script>
+var student = ["홍길동","김유신,"이순신"];
+document.write('<h1>' + student + '</h1>'' + '<br>');
+</script> -->
+
+    <!-- //  바디태그의 아래쪽에 JS script
+    
+    // <script>
+    //     var i = 1;
+    //     var q = 3;
+    //     var w = 5;
+    // for(var i=1; i<=100; i++){
+    //     if (i%(q*w) == 0){
+    //         console.log("삼삼오오");
+    //     }
+    //     else if(i%q==0){
+    //         console.log("삼삼");
+    //     }
+    //     else if(i%w) {
+    //         console.log("오오");
+    //     }
+    //     else{console.log(i);}
+    // </script> -->
+</body>
+
+</html>

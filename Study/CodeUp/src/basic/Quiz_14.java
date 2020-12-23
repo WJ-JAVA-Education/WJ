@@ -12,9 +12,7 @@ public class Quiz_14 {
 		char a = sc.next().charAt(0);
 		char b = sc.next().charAt(0);
 
-
 		System.out.printf("%c %c", a, b);
 
 	}
-
 }
