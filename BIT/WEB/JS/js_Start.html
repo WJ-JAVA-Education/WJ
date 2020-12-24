@@ -10,8 +10,38 @@
 <body>
     <h3>배열 만들기 </h3>
     
-
 <script>
+    let pets =[
+        {이름:"덱스터",종류:"고양이",나이:"2"},
+        {이름:"스텔라",종류:"고양이",나이:"3"},
+        {이름:"헨리",종류:"강아지",나이:"1"}
+    ]
+    console.log(pets.push({이름:"갱스터",종류:"강아지",나이:5}));
+
+    
+
+
+    pets.map(nameOnly)
+
+    function nameOnly(x){
+        return x.이름
+    }
+
+    let dogs = pets.filter(onlyDogs)
+
+    function onlyDogs(x){
+        return x.종류 == "강아지"
+    }
+
+    function onlyBaby(x){
+        return x.나이 <=2
+    }
+    
+    console.log(pets.filter(onlyBaby).filter(onlyDogs).map(nameOnly)) 
+    </script>
+
+
+<!-- <>
     function ask(question, yes , no){
         if (confirm(question)) yes()
         else no();
@@ -27,10 +57,10 @@
         alert('취소 하셨습니다');
     }
     ask("동의하세요?",yes,no);
-    </script>
+    </> -->
 
 
-<!-- <script>
+<!-- <>
     function func(myCall){
         alert(typeof(myCall));
         x(myCall);
@@ -40,9 +70,9 @@
         console.log('myCall 호출');
     }
     func(myCall);
-    </script> -->
+    </> -->
 
-    <!-- <script>
+    <!-- <>
         var plusTen = function () {
             var num = prompt('숫자를 입력', '0');
             alert(Number(num) + 10);
@@ -50,15 +80,15 @@
         console.log(typeof(plusTen));
         plusTen();
     // var go = confirm("계속 진행하시겠습니까?");
-    </script> -->
-    <!-- <script>
+    </> -->
+    <!-- <>
 var student = ["홍길동","김유신,"이순신"];
 document.write('<h1>' + student + '</h1>'' + '<br>');
-</script> -->
+</> -->
 
     <!-- //  바디태그의 아래쪽에 JS script
     
-    // <script>
+    // <>
     //     var i = 1;
     //     var q = 3;
     //     var w = 5;
@@ -73,7 +103,7 @@ document.write('<h1>' + student + '</h1>'' + '<br>');
     //         console.log("오오");
     //     }
     //     else{console.log(i);}
-    // </script> -->
+    // </> -->
 </body>
 
 </html>
