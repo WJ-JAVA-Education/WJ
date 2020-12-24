@@ -1,109 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트</title>
 </head>
-
 <body>
-    <h3>배열 만들기 </h3>
-    
-<script>
-    let pets =[
-        {이름:"덱스터",종류:"고양이",나이:"2"},
-        {이름:"스텔라",종류:"고양이",나이:"3"},
-        {이름:"헨리",종류:"강아지",나이:"1"}
-    ]
-    console.log(pets.push({이름:"갱스터",종류:"강아지",나이:5}));
-
-    
-
-
-    pets.map(nameOnly)
-
-    function nameOnly(x){
-        return x.이름
+    <!-- 바디태그의 아래쪽에 JS script -->
+    <script>
+for (var i=1; i<=100; i++){
+    if(i%15 == '0'){
+        console.log('삼삼오오');
     }
-
-    let dogs = pets.filter(onlyDogs)
-
-    function onlyDogs(x){
-        return x.종류 == "강아지"
+    else if(i%3 == '0'){
+        console.log('삼삼')
     }
-
-    function onlyBaby(x){
-        return x.나이 <=2
+    else if(i%5 == '0'){
+        console.log('오오')
     }
+    else{
+        console.log(i);
+    }
+}
     
-    console.log(pets.filter(onlyBaby).filter(onlyDogs).map(nameOnly)) 
+
+
+
+// for(var i=1; i<=100; i++){
+//     if(i%15 == 0){
+//         console.log('삼삼오오');
+//     }
+//     if(i%3 == 0){
+//         console.log('삼삼');
+//     }
+//     else(i%5 == 0){
+//         console.log('오오');
+//     }
+// }
+//     else{
+//         console.log(i);
+//     }
+
+//    var id = prompt('아이디를 입력해주세요.');
+//         if(id == 'pusanit' || id == 'busanit' || id == 'fusanit'){
+//             var pass = prompt('비번을 입력해주세요');
+//             if(pass == '502'){
+//                 alert('인증에 성공했습니다.');
+//             }
+//             else{
+//             alert('비밀번호 틀림!');
+//             }
+//             }
+//         else{
+//             alert('아이디 실패!');
+//         }
+
+
+
+//         var id = prompt('아이디를 입력해주세요.');
+//         if((id == 'pusanit' || id == 'busanit' || id == 'fusanit')&&(pass=='502')){
+//                 alert('인증에 성공했습니다.');
+//             }
+//             else{
+//             alert('인증실패!');
+//             }
+
+   // // alert('하이');
+        // // console.log('콘솔출력');
+        // var id = prompt('아이디를 입력해주세요.');
+        // if(id == 'pusanit'){
+        //     var pass = prompt('비번을 입력해주세요');
+        //     if(pass == '502'){
+        //         alert('인증에 성공했습니다.');
+        //     }
+        //     else{
+        //         alert('인증에 실패했습니다.');
+        //     }
+        // }
+        // else{
+        //     alert('아이디 실패!')
+        // }
     </script>
-
-
-<!-- <>
-    function ask(question, yes , no){
-        if (confirm(question)) yes()
-        else no();
-    }
-    
-    function question(){
-        confirm('동의 하십니까?');
-    }
-    function yes(){
-        alert('동의 하셨습니다');
-    }
-    function no(){
-        alert('취소 하셨습니다');
-    }
-    ask("동의하세요?",yes,no);
-    </> -->
-
-
-<!-- <>
-    function func(myCall){
-        alert(typeof(myCall));
-        x(myCall);
-    }
-
-    function myCall(){
-        console.log('myCall 호출');
-    }
-    func(myCall);
-    </> -->
-
-    <!-- <>
-        var plusTen = function () {
-            var num = prompt('숫자를 입력', '0');
-            alert(Number(num) + 10);
-        }
-        console.log(typeof(plusTen));
-        plusTen();
-    // var go = confirm("계속 진행하시겠습니까?");
-    </> -->
-    <!-- <>
-var student = ["홍길동","김유신,"이순신"];
-document.write('<h1>' + student + '</h1>'' + '<br>');
-</> -->
-
-    <!-- //  바디태그의 아래쪽에 JS script
-    
-    // <>
-    //     var i = 1;
-    //     var q = 3;
-    //     var w = 5;
-    // for(var i=1; i<=100; i++){
-    //     if (i%(q*w) == 0){
-    //         console.log("삼삼오오");
-    //     }
-    //     else if(i%q==0){
-    //         console.log("삼삼");
-    //     }
-    //     else if(i%w) {
-    //         console.log("오오");
-    //     }
-    //     else{console.log(i);}
-    // </> -->
+    <!-- <script src="app.js"></script> -->
 </body>
-
 </html>
