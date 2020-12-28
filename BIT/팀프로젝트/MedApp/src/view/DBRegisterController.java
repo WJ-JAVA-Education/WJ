@@ -62,7 +62,7 @@ public class DBRegisterController implements Initializable {
 	private Label mov;
 
 	String path = DBRegisterController.class.getResource("").getPath();
-	// ÇöÀç Å¬·¡½ºÀÇ Àı´ë °æ·Î¸¦ °¡Á®¿Â´Ù. // 2020 12 11 ±èÅÂÇå
+	// í˜„ì¬ í´ë˜ìŠ¤ì˜ ì ˆëŒ€ ê²½ë¡œë¥¼ ê°€ì ¸ì˜¨ë‹¤. // 2020 12 11 ê¹€íƒœí—Œ
 	Message msg = new Message();
 	CSingelton MOrV = CSingelton.getInstance();
 
@@ -74,9 +74,9 @@ public class DBRegisterController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		if (MOrV.getManagerOrViewer() == 1) {
-			mov.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+			mov.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
 		} else {
-			mov.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+			mov.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
 		}
 	}
 	public void fileChoose() {
@@ -108,9 +108,9 @@ public class DBRegisterController implements Initializable {
 
 	@FXML
 	void register(ActionEvent event) throws SQLException {
-		// DB·Î ÀÔ·Â³»¿ëÀ» ÀúÀå->Insert into
+		// DBë¡œ ì…ë ¥ë‚´ìš©ì„ ì €ì¥->Insert into
 		if (MOrV.getManagerOrViewer() == 1) {
-			// ±ÇÇÑÀÌ ÀÖ´Â °æ¿ì
+			// ê¶Œí•œì´ ìˆëŠ” ê²½ìš°
 			String sql = "INSERT INTO medicine Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement pstmt = MOrV.getDBConnect().prepareStatement(sql);
 			pstmt.setNString(1, name.getText());
@@ -125,13 +125,13 @@ public class DBRegisterController implements Initializable {
 
 			pstmt.executeUpdate();
 
-			msg.setMessage("ÀÔ·Â¼º°ø");
+			msg.setMessage("ì…ë ¥ì„±ê³µ");
 
-		} else {// ±ÇÇÑÀÌ ¾ø´Â °æ¿ì
-			msg.setMessage("µî·Ï ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.");
+		} else {// ê¶Œí•œì´ ì—†ëŠ” ê²½ìš°
+			msg.setMessage("ë“±ë¡ ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
-	/* ÀÌ¹ÌÁö°¡Á®¿À±â */
+	/* ì´ë¯¸ì§€ê°€ì ¸ì˜¤ê¸° */
 	public class CustomImage {
 		private ImageView image;
 		CustomImage(ImageView img) {
@@ -145,7 +145,7 @@ public class DBRegisterController implements Initializable {
 		}
 	}
 	private String initImage(File imageFile) {
-		String str = imageFile.toURI().toString(); // resource Æú´õ¿¡¼­ ºÒ·¯¿À´Â ¹æ¹ı
+		String str = imageFile.toURI().toString(); // resource í´ë”ì—ì„œ ë¶ˆëŸ¬ì˜¤ëŠ” ë°©ë²•
 		return str;
 	}
 }

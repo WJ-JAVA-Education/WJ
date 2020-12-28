@@ -3,16 +3,16 @@ package Variable;
 public class BinaryExample {
 
 	public static void main(String[] args) {
-		// ¼öÄ¡¿¬»ê
+		// ìˆ˜ì¹˜ì—°ì‚°
 		int k = 7*3 ;
-		int i = 7/3 ; //¸òÀ» ÀúÀå (2)
-		int j = 7%3 ; // ³ª¸ÓÁö¸¦ ÀúÀå (1)
+		int i = 7/3 ; //ëª«ì„ ì €ì¥ (2)
+		int j = 7%3 ; // ë‚˜ë¨¸ì§€ë¥¼ ì €ì¥ (1)
 		
 		System.out.println(k);
 		System.out.println(i);
 		System.out.println(j);
 		
-		//ºñ±³¿¬»êÀÚ
+		//ë¹„êµì—°ì‚°ì
 		
 		System.out.println(i == j);
 		System.out.println(i >= j);
@@ -21,7 +21,7 @@ public class BinaryExample {
 		
 		int x = 20;
 		int y = 30;
-		boolean bool = x!= y;  // ( =À» ±âÁØÀ¸·Î ¿À¸¥ÂÊÀÇ Ç×À» ¿ŞÂÊ¿¡ ´ëÀÔÇÑ´Ù¶ó°í »ı°¢.)
+		boolean bool = x!= y;  // ( =ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¥¸ìª½ì˜ í•­ì„ ì™¼ìª½ì— ëŒ€ì…í•œë‹¤ë¼ê³  ìƒê°.)
 		
 		 
 	}

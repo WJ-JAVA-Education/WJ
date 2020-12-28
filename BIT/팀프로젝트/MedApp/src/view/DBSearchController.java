@@ -101,10 +101,10 @@ public class DBSearchController implements Initializable {
 
 
 		if(Singelotn.getManagerOrViewer() == 1) {
-    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+    		ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
     	}
     	else {
-    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+    		ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
     	}
 
 		if(Singelotn.getSearchText().equals(""))

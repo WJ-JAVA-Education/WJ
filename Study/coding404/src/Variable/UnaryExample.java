@@ -3,26 +3,26 @@ package Variable;
 public class UnaryExample {
 
 	public static void main(String[] args) {
-		//ºÎÈ£ ¿¬»êÀÚ +,-
+		//ë¶€í˜¸ ì—°ì‚°ì +,-
 		
 		int num1 = -5;
-		int result = -num1;		// - ¸¦ ºÙÈ÷¸é À½¼ö·Î ÀüÈ¯½ÃÄÑÁØ´Ù.
+		int result = -num1;		// - ë¥¼ ë¶™íˆë©´ ìŒìˆ˜ë¡œ ì „í™˜ì‹œì¼œì¤€ë‹¤.
 		System.out.println(result);
 		
-		// Áõ°¨¿¬»êÀÚ ++ , --
+		// ì¦ê°ì—°ì‚°ì ++ , --
 			int i = 1;
 			
-			int j = i++; // ÈÄÀ§¿¬»êÀÚ : ¸ÕÀú °ªÀ»¿¬»êÀÌ³ª , ´ëÀÔ ÈÄ¿¡ ¸¶Áö¸·¿¡ +1À» Áõ°¡
+			int j = i++; // í›„ìœ„ì—°ì‚°ì : ë¨¼ì € ê°’ì„ì—°ì‚°ì´ë‚˜ , ëŒ€ì… í›„ì— ë§ˆì§€ë§‰ì— +1ì„ ì¦ê°€
 			
-			System.out.println("iÀÇ °ª" +i);
-			System.out.println("jÀÇ °ª" +j);
+			System.out.println("iì˜ ê°’" +i);
+			System.out.println("jì˜ ê°’" +j);
 		
 			
 			int x = 1;
-			int y = ++x;	// ÀüÀ§¿¬»êÀÚ : ¸ÕÀú +1 À» Áõ°¡ÇÑ ÈÄ¿¡ , ´ëÀÔ.
+			int y = ++x;	// ì „ìœ„ì—°ì‚°ì : ë¨¼ì € +1 ì„ ì¦ê°€í•œ í›„ì— , ëŒ€ì….
 			
-			System.out.println( "xÀÇ °ª" + x);
-			System.out.println( "yÀÇ °ª" + y);
+			System.out.println( "xì˜ ê°’" + x);
+			System.out.println( "yì˜ ê°’" + y);
 			
 			int k = 1;
 			k++;
@@ -30,13 +30,13 @@ public class UnaryExample {
 			k--;
 			System.out.println(k);
 			
-			//ºñÆ® ¿¬»êÀÚ ~ 
-			// Á¤¼ö°ªÀ» 2Áø¼ö·Î  Ç¥ÇöÇØ¼­ °¢ÀÚ¸®¼ö¸¦ ¹İÀü½ÃÅ²´Ù.
+			//ë¹„íŠ¸ ì—°ì‚°ì ~ 
+			// ì •ìˆ˜ê°’ì„ 2ì§„ìˆ˜ë¡œ  í‘œí˜„í•´ì„œ ê°ìë¦¬ìˆ˜ë¥¼ ë°˜ì „ì‹œí‚¨ë‹¤.
 			
 			byte b = 8;
 			System.out.println(~b);
 			
-			//³í¸® ¹İÀü ¿¬»êÀÚ !
+			//ë…¼ë¦¬ ë°˜ì „ ì—°ì‚°ì !
 			System.out.println(!true);
 			System.out.println(!false);
 			

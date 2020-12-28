@@ -4,22 +4,22 @@ public class VariableExam {
 
 	public static void main(String[] args) {
 		/*
-		 * º¯¼öÀÇ ¼±¾ð ¹æ¹ý Å×ÀÌÅÍÅ¸ÀÔ º¯¼öÀÌ¸§; -int ´Â Á¤¼ö¸¦ ÀúÀåÇÏ´Â ´ëÇ¥ÀûÀÎ À¯Çü
+		 * ë³€ìˆ˜ì˜ ì„ ì–¸ ë°©ë²• í…Œì´í„°íƒ€ìž… ë³€ìˆ˜ì´ë¦„; -int ëŠ” ì •ìˆ˜ë¥¼ ì €ìž¥í•˜ëŠ” ëŒ€í‘œì ì¸ ìœ í˜•
 		 */
 
 		int num1;
 
-		// º¯¼öÀÇ ÃÊ±âÈ­
+		// ë³€ìˆ˜ì˜ ì´ˆê¸°í™”
 
 		num1 = 1;
 
 		System.out.println(num1);
 
-		// º¯¼öÀÇ ¼±¾ð°ú ÃÊ±âÈ­¸¦ µ¿½Ã¿¡.
+		// ë³€ìˆ˜ì˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”ë¥¼ ë™ì‹œì—.
 
 		int num2 = 10;
 
-		// º¯¼ö¿¡´Â ´Ù¸¥ º¯¼öÀÇ °ªÀ» ÀúÀåÇÏ°Å³ª , º¯°æÇÒ ¼ö ÀÖÀ½.
+		// ë³€ìˆ˜ì—ëŠ” ë‹¤ë¥¸ ë³€ìˆ˜ì˜ ê°’ì„ ì €ìž¥í•˜ê±°ë‚˜ , ë³€ê²½í•  ìˆ˜ ìžˆìŒ.
 
 		num2 = 20;
 		num1 = 10;

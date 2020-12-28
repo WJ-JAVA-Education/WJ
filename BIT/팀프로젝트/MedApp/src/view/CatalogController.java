@@ -102,9 +102,9 @@ public class CatalogController implements Initializable {
 		});
 
 		if (mov.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
 		} else {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
 		}
 		showMedicine();
 		tbCatalog.getSelectionModel().selectedItemProperty().addListener(
@@ -138,7 +138,7 @@ public class CatalogController implements Initializable {
 			}
 
 		} catch (Exception e) {
-			System.out.println("DB¿¡¼­ SQL¹®À» ½ÇÇà ºÒ°¡" + e);
+			System.out.println("DBì—ì„œ SQLë¬¸ì„ ì‹¤í–‰ ë¶ˆê°€" + e);
 		}
 		return medicineList;
 	}
@@ -169,8 +169,8 @@ public class CatalogController implements Initializable {
 
 	}
 
-	private void showBookDetails(Medicine medicine) { // <== newValue ´Â books ÀÇ
-														// °´Ã¼
+	private void showBookDetails(Medicine medicine) { // <== newValue ëŠ” books ì˜
+														// ê°ì²´
 		if (medicine != null) {
 			label1.setText(medicine.getName());
 		} else {
@@ -197,7 +197,7 @@ public class CatalogController implements Initializable {
 			pstmt.executeUpdate();
 			connect.commit();
 		} catch (Exception e) {
-			System.out.println("¾÷µ¥ÀÌÆ® Áß  ¿¡·¯¹ß»ı!");
+			System.out.println("ì—…ë°ì´íŠ¸ ì¤‘  ì—ëŸ¬ë°œìƒ!");
 		}
 	}
 }

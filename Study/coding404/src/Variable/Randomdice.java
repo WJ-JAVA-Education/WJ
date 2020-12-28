@@ -8,7 +8,7 @@ public class Randomdice {
 		int a = (int) (Math.random() * 100);
 
 		if (a > 60) {
-			System.out.println(a + " а║ ют╢о╢ы.");
+			System.out.println(a + " Л═░ Л·┘К▀┬К▀╓.");
 		}
 	}
 }

@@ -45,8 +45,8 @@ public class MdateController implements Initializable {
 		Statement stmt;
 		ResultSet rs;
 		try {
-			stmt = mov.getDBConnect().createStatement(); // Äõ¸® °´Ã¼ »ı¼º
-			rs = stmt.executeQuery(sql); // Á¢¼ÓµÈ DB¿¡¼­ Äõ¸®¸¦ ½ÇÇàÇÏ°í °á°ú¸¦ ¸®ÅÏ
+			stmt = mov.getDBConnect().createStatement(); // ì¿¼ë¦¬ ê°ì²´ ìƒì„±
+			rs = stmt.executeQuery(sql); // ì ‘ì†ëœ DBì—ì„œ ì¿¼ë¦¬ë¥¼ ì‹¤í–‰í•˜ê³  ê²°ê³¼ë¥¼ ë¦¬í„´
 			Medicine medicine;
 			while (rs.next()) {
 				medicine = new Medicine(rs.getString("name"),
@@ -54,7 +54,7 @@ public class MdateController implements Initializable {
 				medicineList.add(medicine);
 			}
 		} catch (Exception e) {
-			System.out.println("DB¿¡¼­ sql¹®À» ½ÇÇàºÒ°¡: " + e);
+			System.out.println("DBì—ì„œ sqlë¬¸ì„ ì‹¤í–‰ë¶ˆê°€: " + e);
 		}
 		return medicineList;
 	}
@@ -70,9 +70,9 @@ public class MdateController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		if (mov.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
 		} else {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
 		}
 		showMedicine();
 		SimpleDateFormat Date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

@@ -78,7 +78,7 @@ public class Number3 implements Initializable {
 
 	@FXML
 	void onClickSearchbtn(ActionEvent event) {
-		// ¿øÇÏ´Â ½ÇÇà¹®
+		// ì›í•˜ëŠ” ì‹¤í–‰ë¬¸
 		MOrV.setSearchText(SearchBox.getText());
 		Stage stage = new Stage();
 		String FXMLRout = "../view/DBSearch.fxml";
@@ -96,9 +96,9 @@ public class Number3 implements Initializable {
 		SearchListBox.setFocusTraversable(false);
 		Searchbtn.setFocusTraversable(false);
 		if (MOrV.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ìž");
 		} else {
-			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëžŒìž");
 		}
 
 		input.setOnMouseClicked(evnet -> {

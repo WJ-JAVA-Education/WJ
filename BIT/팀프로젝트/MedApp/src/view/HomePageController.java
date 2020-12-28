@@ -77,7 +77,7 @@ public class HomePageController implements Initializable {
 				team01List.add(team01);
 			}
 		} catch (Exception e) {
-			System.out.println("DB¿¡¼­ sql¹®À» ½ÇÇàºÒ°¡: " + e);
+			System.out.println("DBì—ì„œ sqlë¬¸ì„ ì‹¤í–‰ë¶ˆê°€: " + e);
 		}
 
 		return team01List;
@@ -130,7 +130,7 @@ public class HomePageController implements Initializable {
 			pstmt.executeUpdate();
 			conn.commit();
 		} catch (Exception e) {
-			System.out.println("¾÷µ¥ÀÌÆ®Áß ¿¡·¯¹ß»ı!");
+			System.out.println("ì—…ë°ì´íŠ¸ì¤‘ ì—ëŸ¬ë°œìƒ!");
 		}
 	}
 
@@ -145,7 +145,7 @@ public class HomePageController implements Initializable {
 			pstmt.executeUpdate();
 			conn.commit();
 		} catch (Exception e) {
-			System.out.println("»èÁ¦Áß ¿¡·¯¹ß»ı!");
+			System.out.println("ì‚­ì œì¤‘ ì—ëŸ¬ë°œìƒ!");
 		}
 	}
 

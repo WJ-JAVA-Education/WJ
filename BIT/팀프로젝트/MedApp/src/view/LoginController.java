@@ -58,7 +58,7 @@ public class LoginController {
 		if (rs.next()) {
 			if (tfEmail.getText().equals(rs.getNString("id"))
 					&& tfPass.getText().equals(rs.getNString("PASSWORD"))) {
-				if (rs.getNString("permit").equals("°ü¸®ÀÚ")) {
+				if (rs.getNString("permit").equals("ê´€ë¦¬ì")) {
 					mov.setManagerOrViewer(1);
 				}
 				LoginSucess = true;
@@ -74,7 +74,7 @@ public class LoginController {
 				msg.setMessage("Success!");
 			}
 		} else {
-			msg.setMessage("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ Àß¸øµÇ¾ú½À´Ï´Ù.");
+			msg.setMessage("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 		}
 	}
