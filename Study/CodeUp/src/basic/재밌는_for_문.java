@@ -2,16 +2,16 @@ package basic;
 
 import java.util.*;
 
-public class Àç¹Õ´Â_for_¹® {
+public class ìž¬ë°ŒëŠ”_for_ë¬¸ {
 
 	public static void main(String[] args) {
 		int i = 0;
 
 		for (int a = 1, j = 1 ; a <= 100; a++, j++ ) {
-			System.out.println("µüÁÁ³ë " + j + " È¸");
-			System.out.println("±×¸¸ÇÏ³ë " + a + " È¸");
+			System.out.println("ë”±ì¢‹ë…¸ " + j + " íšŒ");
+			System.out.println("ê·¸ë§Œí•˜ë…¸ " + a + " íšŒ");
 			if (a%10==0) {
-				System.out.println("¾Æ ½Ã¹Ù!! ±×¸¸ÇÏ¶ó´Ï±î!!!");
+				System.out.println("ì•„ ì‹œë°”!! ê·¸ë§Œí•˜ë¼ë‹ˆê¹Œ!!!");
 			}
 
 		}

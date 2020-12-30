@@ -1,17 +1,17 @@
-﻿<%@ page contentType="text/html; charset=utf-8"%>
+癤?%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository"%>
 <%@ page errorPage ="exceptionNoProductId.jsp"%>
 <html>
 <head>
 <link rel ="stylesheet" href ="./resources/css/bootstrap.min.css" />
-<title>상품 상세 정보</title>
+<title>?곹뭹 ?곸꽭 ?뺣낫</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">상품 정보</h1>
+			<h1 class="display-3">?곹뭹 ?뺣낫</h1>
 		</div>
 	</div>
 	<%
@@ -27,12 +27,12 @@
 			<div class="col-md-6">
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%>
-				<p><b>상품 코드 : </b><span class="badge badge-danger"> <%=product.getProductId()%></span>
-				<p><b>제조사</b> : <%=product.getManufacturer()%>
-				<p><b>분류</b> : <%=product.getCategory()%>
-				<p><b>재고 수</b> : <%=product.getUnitsInStock()%>
-				<h4><%=product.getUnitPrice()%>원</h4>
-				<p><a href="#" class="btn btn-info"> 상품 주문 &raquo;</a> <a	href="./products.jsp" class="btn btn-secondary"> 상품 목록 &raquo;</a>
+				<p><b>?곹뭹 肄붾뱶 : </b><span class="badge badge-danger"> <%=product.getProductId()%></span>
+				<p><b>?쒖“??/b> : <%=product.getManufacturer()%>
+				<p><b>遺꾨쪟</b> : <%=product.getCategory()%>
+				<p><b>?ш퀬 ??/b> : <%=product.getUnitsInStock()%>
+				<h4><%=product.getUnitPrice()%>??/h4>
+				<p><a href="#" class="btn btn-info"> ?곹뭹 二쇰Ц &raquo;</a> <a	href="./products.jsp" class="btn btn-secondary"> ?곹뭹 紐⑸줉 &raquo;</a>
 			</div>
 		</div>
 		<hr>

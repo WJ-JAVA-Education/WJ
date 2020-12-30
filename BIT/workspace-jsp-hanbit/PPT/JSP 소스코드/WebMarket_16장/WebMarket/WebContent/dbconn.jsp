@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-<%@ page import="java.sql.*"%> 
+<%@ page import="java.sql.*"%>혻
 <%
 	Connection conn = null;	
 	PreparedStatement pstmt = null;
@@ -14,7 +14,7 @@
 		conn = DriverManager.getConnection(url, user, password);
 		
 	} catch (SQLException ex) {
-		out.println("데이터베이스 연결이 실패되었습니다.<br>");
+		out.println("?곗씠?곕쿋?댁뒪 ?곌껐???ㅽ뙣?섏뿀?듬땲??<br>");
 		out.println("SQLException: " + ex.getMessage());
 	}
 		

@@ -1,4 +1,4 @@
-﻿<%@ page contentType="text/html; charset=utf-8"%>
+癤?%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="com.oreilly.servlet.*"%>
 <%@ page import="com.oreilly.servlet.multipart.*"%>
 <%@ page import="java.util.*"%>
@@ -6,9 +6,9 @@
 <%@ include file="dbconn.jsp" %>
 <%
 	String filename = "";
-	String realFolder = "C:\\upload"; //웹 어플리케이션상의 절대 경로
-	String encType = "utf-8"; //인코딩 타입
-	int maxSize = 5 * 1024 * 1024; //최대 업로드될 파일의 크기5Mb
+	String realFolder = "C:\\upload"; //???댄뵆由ъ??댁뀡?곸쓽 ?덈? 寃쎈줈
+	String encType = "utf-8"; //?몄퐫?????
+	int maxSize = 5 * 1024 * 1024; //理쒕? ?낅줈?쒕맆 ?뚯씪???ш린5Mb
 
 	MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType,
 			new DefaultFileRenamePolicy());
