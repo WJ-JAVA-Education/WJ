@@ -6,9 +6,6 @@ public class Quiz_1035 {
 
 		String A = sc.next();
 		int b = Integer.valueOf(A,16);
-		
-		
-		
 		System.out.printf("%o",b);
 		
 	}
