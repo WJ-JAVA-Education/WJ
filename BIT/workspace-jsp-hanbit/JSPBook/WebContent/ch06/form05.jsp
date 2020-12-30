@@ -9,8 +9,8 @@
 		<p>	아이디 : <input type="text" name="id"> <input type="button"	value="아이디 중복검사">
 		<p>	비밀번호 : <input type="password" name="passwd">
 		<p>	이름 : <input type="text" name="name">
-		<p>	연락처 : <select name="phone">
-				<option value="010">010</option>
+		<p>	연락처 : <select name="phone1">
+				<option value="010" >010</option>
 				<option value="011">011</option>
 				<option value="016">016</option>
 				<option value="017">017</option>

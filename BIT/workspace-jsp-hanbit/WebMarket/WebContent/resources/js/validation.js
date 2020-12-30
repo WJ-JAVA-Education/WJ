@@ -1,9 +1,11 @@
 function CheckAddProduct() {
-
+	//정석
+	var newProduct = document.getElementById("newProduct");
 	var productId = document.getElementById("productId");
 	var name = document.getElementById("name");
 	var unitPrice = document.getElementById("unitPrice");
 	var unitsInStock = document.getElementById("unitsInStock");
+	var productImage = document.getElementById("productImage");
 	
 	// 상품아아디 체크
 	if (!check(/^P[0-9]{4,11}$/, productId,
@@ -41,6 +43,14 @@ function CheckAddProduct() {
 		return false;
 	}
 
+	// 이미지가 없을 경우
+	if(productImage.files.length == 0){
+		alert("이미지를 첨부해주세요!");
+		productImage.focus();
+		return flase;
+	}
+	
+
 	function check(regExp, e, msg) {
 
 		if (regExp.test(e.value)) {
@@ -52,5 +62,5 @@ function CheckAddProduct() {
 		return false;
 	}
 
-	 document.newProduct.submit()
+	 newProduct.submit() // 자바스크립트로 서버 전송 (submit)
 }

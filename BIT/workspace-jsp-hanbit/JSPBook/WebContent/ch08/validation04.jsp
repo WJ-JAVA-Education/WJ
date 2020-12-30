@@ -17,8 +17,8 @@
 			}
 		}
 	
-		if (isNaN(form.passwd.value)){
-			alert("비밀번호는 숫자로만 입력 가능 합니다!");
+		if (isNaN(form.passwd.value) || form.passwd.value.length<4){
+			alert("비밀번호는 숫자 및 4자리 이상 입력해주세요.");
 			form.passwd.select();
 			return;
 		}
