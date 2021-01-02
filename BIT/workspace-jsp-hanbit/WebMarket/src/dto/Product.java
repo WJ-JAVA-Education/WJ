@@ -15,7 +15,9 @@ public class Product implements Serializable{
 	private String condition; 	//신상품 or 중고품 or 재생품
 	private String filename; 	//이미지 파일명
 	
-	public Product() {}
+	public Product() {
+	    super();
+	}
 	
 	public Product(String productId, String pname, Integer unitPrice) {
 		this.productId = productId;

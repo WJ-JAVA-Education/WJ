@@ -17,6 +17,7 @@
 	</div>
 	<div class="container">
 		<div class="text-right"> 
+			<!-- 한글을 클릭하면 language=ko가 서버로 전달 -->
 			<a href="?language=ko" >Korean</a>|<a href="?language=en" >English</a>
 		</div>	
 		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">

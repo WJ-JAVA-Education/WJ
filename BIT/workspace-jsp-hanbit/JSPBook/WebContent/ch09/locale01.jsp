@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8"%>
+<%@page contentType="text/html; charset=utf-8"%>
 <%@page import="java.text.NumberFormat"%>
 <%@page import="java.text.DateFormat"%>
 <%@page import="java.util.*"%>

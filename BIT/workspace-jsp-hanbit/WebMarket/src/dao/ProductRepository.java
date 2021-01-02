@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import dto.Product;
 
-public class ProductRepository<retrun> {
+public class ProductRepository {
 
-    private ArrayList<Product> listOfProducts = new ArrayList<>();
+    private ArrayList<Product> listOfProducts = new ArrayList<Product>();
     // 싱글톤 패턴
     private static ProductRepository instance = new ProductRepository();
 
@@ -43,7 +43,6 @@ public class ProductRepository<retrun> {
 	listOfProducts.add(phone);
 	listOfProducts.add(notebook);
 	listOfProducts.add(tablet);
-
     }
 
     public ArrayList<Product> getAllProducts() {
@@ -51,22 +50,22 @@ public class ProductRepository<retrun> {
     }
 
     // 아이디로 리스트의 제품을 검색해서 제품객체를 리턴한다.
-    public Product getProductByID(String productID) {
-	Product ProductByID = null;
+    public Product getProductById(String productId) {
+	Product productById = null;
+
 	// 리스트의 제품들을 하나씩 반복문을 실행한다.
 	for (int i = 0; i < listOfProducts.size(); i++) {
 	    Product product = listOfProducts.get(i);
-	    if (product.getProductId().equals(productID))
-		;
-	    ProductByID = product;
-	    break;
+	    if (product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
+		productById = product;
+		break;
+	    }
 	}
-	return ProductByID;
+	return productById;
     }
 
     // 새로 등록된 제품을 리스트에 추가한다.
     public void addProduct(Product product) {
 	listOfProducts.add(product);
     }
-
 }
