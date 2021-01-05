@@ -1,4 +1,4 @@
-癤?%@ page contentType="text/html; charset=utf-8"%>
+﻿<%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.util.Date"%>
 <html>
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
-	<%!String greeting = "???쇳븨紐곗뿉 ?ㅼ떊 寃껋쓣 ?섏쁺?⑸땲??;
+	<%!String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 	String tagline = "Welcome to Web Market!";%>
 	<div class="jumbotron">
 		<div class="container">
@@ -34,7 +34,7 @@
 					hour = hour - 12;
 				}
 				String CT = hour + ":" + minute + ":" + second + " " + am_pm;
-				out.println("?꾩옱 ?묒냽  ?쒓컖: " + CT + "\n");
+				out.println("현재 접속  시각: " + CT + "\n");
 			%>
 		</div>
 		<hr>

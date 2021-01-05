@@ -17,8 +17,9 @@ public class LogFilter implements Filter  {
 		long start = System.currentTimeMillis();
         System.out.println(" 접근한 URL 경로 : " + getURLPath(request));
 		System.out.println(" 요청 처리 시작 시각 : " + getCurrentTime());
-		chain.doFilter(request,response);
-		
+		//request
+		chain.doFilter(request,response); 
+		//response
 		long end = System.currentTimeMillis();		
 		System.out.println(" 요청 처리 종료 시각 : " + getCurrentTime());
 		System.out.println(" 요청 처리 소요 시간 : " + (end-start)+ "ms ");

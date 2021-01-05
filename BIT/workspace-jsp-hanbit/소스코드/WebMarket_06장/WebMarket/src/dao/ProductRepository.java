@@ -22,7 +22,7 @@ public class ProductRepository {
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
 
-		Product notebook = new Product("P1235", "LG PC ê·¸ëž¨", 1500000);
+		Product notebook = new Product("P1235", "LG PC ±×·¥", 1500000);
 		notebook.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core processors");
 		notebook.setCategory("Notebook");
 		notebook.setManufacturer("LG");
