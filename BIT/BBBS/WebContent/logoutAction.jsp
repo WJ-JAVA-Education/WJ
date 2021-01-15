@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="user.UserDAO"%>
+<!-- form으로 부터 전달된 값을 Ueser객체의 프로퍼티(필드변수)에 설정 
+	 input 태그의 name과 자바빈의 프로퍼티명과 동일한 것에 대응-->
+<% request.setCharacterEncoding("UTF-8"); %>
+<jsp:useBean id="user" class="user.User" scope="page" />
+<jsp:setProperty name="user" property="userID" />
+<jsp:setProperty name="user" property="userPassword" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JSP 게시판 웹 사이트</title>
+</head>
+<body>
+
+
+
+	<%
+	session.invalidate();
+	%>
+
+	<script>
+	location.href = 'main.jsp';
+	</script>
+
+
+
+
+
+
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
