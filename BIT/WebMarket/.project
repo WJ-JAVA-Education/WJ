@@ -28,26 +28,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>WebContent/META-INF</name>
-			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/jsp-study-master/jsp-study-master/WebMarket_18%EC%9E%A5/WebMarket/WebContent/META-INF</locationURI>
-		</link>
-		<link>
-			<name>WebContent/WEB-INF</name>
-			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/jsp-study-master/jsp-study-master/WebMarket_18%EC%9E%A5/WebMarket/WebContent/WEB-INF</locationURI>
-		</link>
-		<link>
-			<name>WebContent/member</name>
-			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/jsp-study-master/jsp-study-master/WebMarket_18%EC%9E%A5/WebMarket/WebContent/member</locationURI>
-		</link>
-		<link>
-			<name>WebContent/resources</name>
-			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/jsp-study-master/jsp-study-master/WebMarket_18%EC%9E%A5/WebMarket/WebContent/resources</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

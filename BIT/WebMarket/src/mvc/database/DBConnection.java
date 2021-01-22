@@ -12,7 +12,7 @@ public class DBConnection {
 	
 		String url = "jdbc:mysql://localhost:3306/WebMarketDB";
 		String user = "root";
-		String password = "1234";
+		String password = "root";
 
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, user, password);		
