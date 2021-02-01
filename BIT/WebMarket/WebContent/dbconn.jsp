@@ -6,7 +6,7 @@
 	ResultSet rs = null;
 	
 	try {
-		String url = "jdbc:mysql://localhost:3306/WebMarketdb?useSSL=false";
+		String url = "jdbc:mysql://localhost:3306/webmarketdb?useSSL=false";
 		String user = "root";
 		String password = "root";
 

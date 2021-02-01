@@ -1,18 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-<link rel="stylesheet" href="resources/css/bootstrap.min.css">
-<title>상품목록</title>
+	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+	<title>상품목록</title>
 </head>
 
 <body>
 	<jsp:include page="menu.jsp" />
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">상품 목록</h1>
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="display-3">
+					상품 목록
+				</h1>
+			</div>
 		</div>
-	</div>
-	<%@ include file="dbconn.jsp"%>
+	<%@ include file="dbconn.jsp" %>
 	<div class="container">
 		<div class="row text-center">
 			<% 
@@ -27,10 +29,8 @@
 				<img src="/upload/<%=rs.getString("p_fileName")%>" class="w-100" />
 				<h3><%=rs.getString("p_name")%></h3>
 				<p><%=rs.getString("p_description")%></p>
-				<p><%=rs.getInt("p_unitPrice")%>원
-				</p>
-				<p>
-					<a href="product.jsp?id=<%=rs.getString("p_id")%>" class="btn btn-secondary">상세정보 &raquo;</a>
+				<p><%=rs.getInt("p_unitPrice")%>원</p>
+				<p><a href="product.jsp?id=<%=rs.getString("p_id")%>" class="btn btn-secondary">상세정보  &raquo;</a>
 			</div>
 			<%
 				}

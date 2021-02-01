@@ -8,7 +8,7 @@
 <nav class="navbar navbar-expand  navbar-dark bg-dark">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<c:url value="/welcome.jsp"/>">Home</a>
+			<a class="navbar-brand" href="<c:url value='/welcome.jsp'/>">Home</a>
 		</div>
 		<div>
 			<ul class="navbar-nav">
@@ -46,6 +46,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<c:url value="/editProduct.jsp?edit=delete"/>">상품 삭제</a>
+				</li>				
+				<li class="nav-item">
+					<a class="nav-link" href="<c:url value="../board/view.jsp"/>">게시판</a>
 				</li>				
 			</ul>
 		</div>
