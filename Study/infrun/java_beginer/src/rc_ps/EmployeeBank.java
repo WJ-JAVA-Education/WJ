@@ -12,20 +12,20 @@ public EmployeeBank(String name) {
 
 public void saveMoney(Integer money) {
 	this.amount += money;
-	//System.out.println("±İ¿ù Àú±İ±İ¾× + :" + amount);
+	//System.out.println("ê¸ˆì›” ì €ê¸ˆê¸ˆì•¡ + :" + amount);
 }
 
 
 public void spendMoney (Integer money) {
 	this.amount -= money;
-	//System.out.println("±İ¿ù »ç¿ë±İ¾× "+ amount);
+	//System.out.println("ê¸ˆì›” ì‚¬ìš©ê¸ˆì•¡ "+ amount);
 	System.out.println();
 }
 	
 public void getBankinfo() {
 	//System.out.println("===========================");
-	//System.out.println("ÀÌ¸§" + this.name);
-	//System.out.println("°èÁÂ"+ this.amount);
+	//System.out.println("ì´ë¦„" + this.name);
+	//System.out.println("ê³„ì¢Œ"+ this.amount);
 }
 
 

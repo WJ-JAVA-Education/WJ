@@ -6,10 +6,10 @@ public class main extends Child {
 
 		Child child = new Child();
 		
-		child.¾Æºü();
-		child.¾ö¸¶();
+		child.ì•„ë¹ ();
+		child.ì—„ë§ˆ();
 		
-		System.out.println(child.¾Æºü³ªÀÌ);
+		System.out.println(child.ì•„ë¹ ë‚˜ì´);
 			
 		
 	}

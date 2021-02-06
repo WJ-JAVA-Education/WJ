@@ -4,22 +4,22 @@ public class interfaceClass implements interfaceA , interfaceB , interfaceC , in
 
 	@Override
 	public void funD() {
-		System.out.println("====== ÀÎÅÍÆäÀÌ½º D ======");
+		System.out.println("====== ì¸í„°í˜ì´ìŠ¤ D ======");
 	}
 
 	@Override
 	public void funC() {
-		System.out.println("====== ÀÎÅÍÆäÀÌ½º C ======");
+		System.out.println("====== ì¸í„°í˜ì´ìŠ¤ C ======");
 	}
 
 	@Override
 	public void funB() {
-		System.out.println("====== ÀÎÅÍÆäÀÌ½º B ======");
+		System.out.println("====== ì¸í„°í˜ì´ìŠ¤ B ======");
 	}
 
 	@Override
 	public void funA() {
-		System.out.println("====== ÀÎÅÍÆäÀÌ½º A ======");
+		System.out.println("====== ì¸í„°í˜ì´ìŠ¤ A ======");
 	}
 	
 	

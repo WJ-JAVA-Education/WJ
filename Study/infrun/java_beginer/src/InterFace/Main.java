@@ -9,7 +9,9 @@ public class Main {
 		inf.funA();
 		inf.funB();
 		inf.funC();
-		inf.funD();
+		inf.funD(); -> {
+			System.out.println("안녕하세요");
+		}
 		
 	}
 

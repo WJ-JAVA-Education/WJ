@@ -1,7 +1,7 @@
 package InterFace;
 
+
 public interface interfaceD {
 
-	public void funD();
-	
+	public void funD(String aString);
 }
