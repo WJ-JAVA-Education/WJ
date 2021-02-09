@@ -1,0 +1,19 @@
+package crawling;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+
+
+public class crawling {
+
+	public static void main(String[] args) {
+		try {
+			
+
+		Document doc  = Jsoup.connect("https://private-yeri.tistory.com/7").get();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}
