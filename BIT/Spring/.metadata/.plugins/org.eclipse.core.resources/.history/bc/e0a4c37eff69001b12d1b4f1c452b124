@@ -1,0 +1,21 @@
+package crawling;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
+
+public class crawling {
+
+	public static void main(String[] args) {
+		try {
+
+			Document doc  = Jsoup.connect("https://private-yeri.tistory.com/7").get();
+			Element hot_deal = doc.select("cm_pick_list cmRecommend");
+			
+			
+		} catch (Exception e) {
+		}
+		
+	}
+
+}
