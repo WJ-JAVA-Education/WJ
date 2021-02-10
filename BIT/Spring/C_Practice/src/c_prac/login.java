@@ -2,8 +2,8 @@ package c_prac;
 
 public class login {
 
-		String id ="wodn4569";
-		String pw ="jas1092";
+		String id ="*";
+		String pw ="*";
 		
 		public login() {}
 		
