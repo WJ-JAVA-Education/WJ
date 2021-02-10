@@ -13,10 +13,8 @@ public class ex1 {
 		String url = "http://www.thevapor.co.kr/";
 		try {
 			Document doc =	Jsoup.connect(url).get();
-			Elements html = doc.select("div");
-			Elements html2 = html.select("p");
+			Elements html = doc.select("a");
 			for (Element element : html) {
-				System.out.println(doc.text());
 				
 				
 			}

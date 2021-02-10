@@ -1,6 +1,4 @@
 INDEX VERSION 1.131+C:\Users\user\Documents\GitHub\WJ\BIT\Spring\.metadata\.plugins\org.eclipse.jdt.core
 1916933918.index
-1621468057.index
-2675836194.index
 587023738.index
 2335480856.index
