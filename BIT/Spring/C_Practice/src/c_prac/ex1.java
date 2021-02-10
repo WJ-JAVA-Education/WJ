@@ -16,7 +16,7 @@ public class ex1 {
 			Elements html = doc.select("div");
 			Elements html2 = html.select("p");
 			for (Element element : html) {
-				System.out.println(html.text());
+				System.out.println(doc.text());
 				
 				
 			}
