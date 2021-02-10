@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\user\Documents\GitHub\WJ\BIT\Spring\C_Practice\lib\jsoup-master\jsoup-master"/>
 			<item value="C:\Users\user\Documents\GitHub\WJ\BIT\Spring\myapp"/>
 			<item value="C:\Users\user\Documents\GitHub\WJ\BIT\Spring"/>
 			<item value="C:\Users\user\Documents\GitHub\Bitc-project2"/>
@@ -27,9 +28,6 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="org.eclipse.jst.j2ee.internal"/>
 		</list>
 	</section>
 </section>
