@@ -3,4 +3,10 @@
 <%	request.setCharacterEncoding("EUC-KR");  // Post 방식 한글처리 
 	// get 방식 한글처리 -> server.xml(63라인) URIEncoding="EUC-KR"
 %>
-<c:redirect url="https://www.tesla.com/ko_kr"/>
+<c:catch var ="ex">
+	<%
+		int arr[] = {1,2,3};
+		int sum = arr[0] + arr[2];
+	%>
+</c:catch>
+${ex}
