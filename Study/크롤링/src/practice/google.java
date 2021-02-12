@@ -11,10 +11,12 @@ import org.jsoup.select.Elements;
 public class google {
 
 	public static void main(String[] args) throws IOException {
-		crawl("한국");
+		GoogleNews("aa");
 	}
 	
-	public static void crawl(String Search)throws IOException {
+	
+	/*
+	public static void P_GoogleNews(String Search)throws IOException {
 		String URL ="https://www.google.com/search?q="+Search+"&tbm=nws";
 		String GOOGLE ="https://www.google.com";
 		
@@ -40,10 +42,29 @@ public class google {
 		  }
 		}
 	}
+	*/
 	
 	
+	
+	public static void GoogleNews(String Search)throws IOException{
+		String URL ="https://www.google.com/search?q="+Search+"&tbm=nws";
+		String GOOGLE ="https://www.google.com";
+		
+		//검색 된 페이지의 페이지를 가져오는 과정
+		Document SearchPage = Jsoup.connect(URL).get();
+		if (pagelink == null) {
+		for (int i = 0; i < array.length; i++) {
+			List<String> pagelink = SearchPage.getElementsByClass("d6cvqb").select("a").eachAttr("href");
+			String[] pagearr = new String[pagelink.size()];
+		}
+		
+		
+		
+		
 	
 	
 	
 	
 }
+}
+
