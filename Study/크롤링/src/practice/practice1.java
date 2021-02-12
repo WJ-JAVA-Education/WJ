@@ -1,10 +1,9 @@
 package practice;
 
 import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,30 +15,33 @@ public class practice1 {
 		
 			Document doc = Jsoup.connect(url).get();
 			
-			List<String> list = new ArrayList<String>();
 			
 			String el = doc.getElementsByClass("item xans-record-").select("a").text().replaceAll("상품명 : ","\n");
 			
-			
-				List<String> el2 = doc.getElementsByClass("item xans-record-").select("a").eachAttr("href");
-				for (String string : el2) {
-					System.out.println("http://www.thevapor.co.kr"+string);
+			String a = "http://www.thevapor.co.kr";
+			List<String> el2 = doc.getElementsByClass("item xans-record-").select("a").eachAttr("href");
+				StringBuilder sb = new StringBuilder();
+				for(int i = 0; i < el2.size(); i++) {
+					sb.append(a + el2.get(i));
+					sb.append("\n");
 				}
-			
-			ArrayList<StringBuffer> list3 = new ArrayList<StringBuffer>();
-			for (int i = 0; i < el2.size();i++) {
-				
+			System.out.println(sb);
+			StringTokenizer tk = new StringTokenizer(sb.toString());
+			List<String> listTk = new ArrayList<String>();
+			try {
+				while(tk.hasMoreTokens()) {
+					listTk.add((String) tk.nextElement());
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-			
-			
-			
-			
+
+			for (int i = 0; i < listTk.size(); i++) {
+				Document doc2 = Jsoup.connect(listTk.get(i)).get();
+				System.out.println(doc2);
+			}
+
 			
 			
 	}
-
-		
-		
-		
-		
 	}
