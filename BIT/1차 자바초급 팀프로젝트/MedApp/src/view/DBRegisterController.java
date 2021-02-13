@@ -1,13 +1,11 @@
 package view;
 
+import java.sql.*;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
@@ -26,68 +24,67 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import model.CSingelton;
+import model.DBConnect;
 
-public class DBRegisterController implements Initializable {
+public class DBRegisterController implements Initializable{
 	@FXML
 	private Label ManagerOrViewer;
 
 	@FXML
 	private AnchorPane anPane;
 	@FXML
-	private JFXTextField name;
+    private JFXTextField name;
 	@FXML
-	private JFXTextField character;
+    private JFXTextField character;
 	@FXML
-	private JFXTextField effect;
+    private JFXTextField effect;
 	@FXML
-	private JFXTextField warning;
+    private JFXTextField warning;
 	@FXML
-	private JFXTextField company;
+    private JFXTextField company;
 	@FXML
-	private JFXDatePicker expiration;
+    private JFXDatePicker expiration;
 	@FXML
-	private JFXTextField price;
+    private JFXTextField price;
 	@FXML
-	private JFXTextField stock;
+    private JFXTextField stock;
 	@FXML
-	private JFXButton btnRegister;
+    private JFXButton btnRegister;
 	@FXML
-	private JFXButton btnHome;
+    private JFXButton btnHome;
 	@FXML
-	private Button btnFChooser;
+    private Button btnFChooser;
 	@FXML
 	private ImageView imgView;
 
-	@FXML
-	private Label mov;
+    @FXML
+    private Label mov;
 
-	String path = DBRegisterController.class.getResource("").getPath();
-	// í˜„ì¬ í´ë˜ìŠ¤ì˜ ì ˆëŒ€ ê²½ë¡œë¥¼ ê°€ì ¸ì˜¨ë‹¤. // 2020 12 11 ê¹€íƒœí—Œ
+    String path = DBRegisterController.class.getResource("").getPath();
+    // ÇöÀç Å¬·¡½ºÀÇ Àı´ë °æ·Î¸¦ °¡Á®¿Â´Ù. // 2020 12 11 ±èÅÂÇå
 	Message msg = new Message();
 	CSingelton MOrV = CSingelton.getInstance();
 
-	@FXML
-	void Exit(ActionEvent event) {
-		btnFChooser.getScene().getWindow().hide();
-	}
+    @FXML
+    void Exit(ActionEvent event) {
+    	btnFChooser.getScene().getWindow().hide();
+    }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		if (MOrV.getManagerOrViewer() == 1) {
-			mov.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
+		if(MOrV.getManagerOrViewer() == 1) {
+			mov.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
 		} else {
-			mov.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
+			mov.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
 		}
 	}
 	public void fileChoose() {
 		FileChooser fChooser = new FileChooser();
 		fChooser.setTitle("");
 		fChooser.setInitialDirectory(new File(path));
-		ExtensionFilter imgType = new ExtensionFilter("image file", "*.jpg",
-				"*.gif", "*.png");
+		ExtensionFilter imgType = new ExtensionFilter("image file", "*.jpg", "*.gif", "*.png");
 		fChooser.getExtensionFilters().add(imgType);
-		ExtensionFilter txtType = new ExtensionFilter("text file", "*.txt",
-				"*.doc");
+		ExtensionFilter txtType = new ExtensionFilter("text file", "*.txt", "*.doc");
 		fChooser.getExtensionFilters().addAll(imgType, txtType);
 
 		File selectedFile = fChooser.showOpenDialog(null);
@@ -100,52 +97,55 @@ public class DBRegisterController implements Initializable {
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			Image img = new Image(bis);
 			imgView.setImage(img);
-		} catch (FileNotFoundException e) {
+		}catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
-	// protected long saveBitmap(SQLiteDatabase database, Bitmap bmp)
+	//protected long saveBitmap(SQLiteDatabase database, Bitmap bmp)
 
-	@FXML
-	void register(ActionEvent event) throws SQLException {
-		// DBë¡œ ì…ë ¥ë‚´ìš©ì„ ì €ì¥->Insert into
-		if (MOrV.getManagerOrViewer() == 1) {
-			// ê¶Œí•œì´ ìˆëŠ” ê²½ìš°
-			String sql = "INSERT INTO medicine Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
-			PreparedStatement pstmt = MOrV.getDBConnect().prepareStatement(sql);
-			pstmt.setNString(1, name.getText());
-			pstmt.setNString(2, path);
-			pstmt.setNString(3, character.getText());
-			pstmt.setNString(4, effect.getText());
-			pstmt.setNString(5, warning.getText());
-			pstmt.setNString(6, company.getText());
-			pstmt.setDate(7, Date.valueOf(expiration.getValue()));
-			pstmt.setLong(8, Integer.parseInt(price.getText()));
-			pstmt.setLong(9, Integer.parseInt(stock.getText()));
+	 @FXML
+	    void register(ActionEvent event) throws SQLException{
+	    		//DB·Î ÀÔ·Â³»¿ëÀ» ÀúÀå->Insert into
+	    	if(MOrV.getManagerOrViewer() == 1) {
+	    		//±ÇÇÑÀÌ ÀÖ´Â °æ¿ì
+	    		String sql = "INSERT INTO medicine Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	    		PreparedStatement pstmt = MOrV.getDBConnect().prepareStatement(sql);
+	    		pstmt.setNString(1,  name.getText());
+	    		pstmt.setNString(2,  path);
+	    		pstmt.setNString(3,  character.getText());
+	    		pstmt.setNString(4,  effect.getText());
+	    		pstmt.setNString(5,  warning.getText());
+	    		pstmt.setNString(6,  company.getText());
+	    		pstmt.setDate(7, Date.valueOf(expiration.getValue()));
+	    		pstmt.setLong(8,  Integer.parseInt(price.getText()));
+	    		pstmt.setLong(9,  Integer.parseInt(stock.getText()));
 
-			pstmt.executeUpdate();
+	    		pstmt.executeUpdate();
 
-			msg.setMessage("ì…ë ¥ì„±ê³µ");
+	    		msg.setMessage("ÀÔ·Â¼º°ø");
 
-		} else {// ê¶Œí•œì´ ì—†ëŠ” ê²½ìš°
-			msg.setMessage("ë“±ë¡ ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤.");
-		}
-	}
-	/* ì´ë¯¸ì§€ê°€ì ¸ì˜¤ê¸° */
-	public class CustomImage {
-		private ImageView image;
-		CustomImage(ImageView img) {
-			this.image = img;
-		}
-		public void setImage(ImageView value) {
-			image = value;
-		}
-		public ImageView getImage() {
-			return image;
-		}
-	}
-	private String initImage(File imageFile) {
-		String str = imageFile.toURI().toString(); // resource í´ë”ì—ì„œ ë¶ˆëŸ¬ì˜¤ëŠ” ë°©ë²•
-		return str;
-	}
+	    	}
+	    	else {//±ÇÇÑÀÌ ¾ø´Â °æ¿ì
+	    		msg.setMessage("µî·Ï ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.");
+	    	}
+	    }
+	 /*ÀÌ¹ÌÁö°¡Á®¿À±â*/
+	 public class CustomImage{
+		 private ImageView image;
+		 CustomImage(ImageView img){
+			 this.image = img;
+		 }
+		 public void setImage(ImageView value) {
+			 image = value;
+		 }
+		 public ImageView getImage() {
+			 return image;
+		 }
+	 }
+	 private String initImage(File imageFile) {
+		 String str = imageFile.toURI().toString(); //resource Æú´õ¿¡¼­ ºÒ·¯¿À´Â ¹æ¹ı
+		 return str;
+	 }
 }
+
+

@@ -2,6 +2,7 @@ package view;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -27,103 +28,106 @@ public class SignUpController implements Initializable {
 	@FXML
 	private Label ManagerOrViewer;
 
-	@FXML
-	private JFXTextField fullname;
+    @FXML
+    private JFXTextField fullname;
 
-	@FXML
-	private JFXPasswordField password;
+    @FXML
+    private JFXPasswordField password;
 
-	@FXML
-	private JFXTextField email;
+    @FXML
+    private JFXTextField email;
 
-	@FXML
-	private JFXCheckBox check;
+    @FXML
+    private JFXCheckBox check;
 
-	@FXML
-	private JFXButton signup;
 
-	@FXML
-	private JFXButton login;
 
-	Message msg = new Message();
+    @FXML
+    private JFXButton signup;
 
-	CSingelton mov = CSingelton.getInstance();
+    @FXML
+    private JFXButton login;
 
-	@FXML
-	void goLogin(ActionEvent event) throws IOException {
-		login.getScene().getWindow().hide();
+    Message msg = new Message();
 
-		Stage login = new Stage();
-		Parent root = FXMLLoader
-				.load(getClass().getResource("../view/Login.fxml"));
+    CSingelton mov = CSingelton.getInstance();
+
+    @FXML
+    void goLogin(ActionEvent event) throws IOException {
+    	login.getScene().getWindow().hide(); //ÇöÀç ÆäÀÌÁö¸¦ ´İ´Â´Ù.
+
+    	Stage login = new Stage();
+    	Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
 		Scene scene = new Scene(root);
-		scene.getStylesheets()
-				.add(getClass().getResource("../application/application.css")
-						.toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 		login.setScene(scene);
 		login.setTitle("Team01");
 		login.show();
-	}
+    }
 
-	@FXML
-	void signUp(ActionEvent event) throws SQLException {
-		if (check.isSelected()) {
-			if (fullname.getText().equals("")) {
-				msg.setMessage("ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			if (email.getText().equals("")) {
-				msg.setMessage("ì•„ì´ë””ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			if (password.getText().equals("")) {
-				msg.setMessage("íŒ¨ìŠ¤ì›Œë“œë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
-			PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql);
-																				
-			pstmt.setNString(1, fullname.getText());
-			pstmt.setNString(2, email.getText());
-			pstmt.setNString(3, password.getText());
-			pstmt.setNString(4, "ê´€ë¦¬ì");
+    @FXML
+    void signUp(ActionEvent event) throws SQLException{
+    		//DB·Î ÀÔ·Â³»¿ëÀ» ÀúÀå->Insert into
+    	if(check.isSelected()) {
+    		//µ¿ÀÇ ÇßÀ» °æ¿ì->DBÀúÀå
+    		if(fullname.getText().equals("")) {
+    			msg.setMessage("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		if(email.getText().equals("")) {
+    			msg.setMessage("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		if(password.getText().equals("")) {
+    			msg.setMessage("ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
+    		PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql); //sql¹®À» ÁØºñ
+    		pstmt.setNString(1,  fullname.getText());
+    		pstmt.setNString(2,  email.getText());
+    		pstmt.setNString(3,  password.getText());
+    		pstmt.setNString(4,  "°ü¸®ÀÚ");
 
-			pstmt.executeUpdate();
+    		pstmt.executeUpdate();//ÁØºñµÈ Äõ¸®¹®À» DB¿¡ Á¢¼ÓÇØ¼­ ½ÇÇà
 
-			msg.setMessage("ê´€ë¦¬ìë¡œ ë“±ë¡ ë˜ì…¨ìŠµë‹ˆë‹¤.");
+    		msg.setMessage("°ü¸®ÀÚ·Î µî·Ï µÇ¼Ì½À´Ï´Ù.");
 
-		} else {
-			if (fullname.getText().equals("")) {
-				msg.setMessage("ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			if (email.getText().equals("")) {
-				msg.setMessage("ì•„ì´ë””ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			if (password.getText().equals("")) {
-				msg.setMessage("íŒ¨ìŠ¤ì›Œë“œë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”!");
-				return;
-			}
-			String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
-			PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql);
-			pstmt.setNString(1, fullname.getText());
-			pstmt.setNString(2, email.getText());
-			pstmt.setNString(3, password.getText());
-			pstmt.setNString(4, "ê²ŒìŠ¤íŠ¸");
+    	}
+    	else {
+    		if(fullname.getText().equals("") ) {
+    			msg.setMessage("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		if(email.getText().equals("")) {
+    			msg.setMessage("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		if(password.getText().equals("")) {
+    			msg.setMessage("ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä!");
+    			return;
+    		}
+    		String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
+    		PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql); //sql¹®À» ÁØºñ
 
-			pstmt.executeUpdate();
+    		pstmt.setNString(1,  fullname.getText());
+    		pstmt.setNString(2,  email.getText());
+    		pstmt.setNString(3,  password.getText());
+    		pstmt.setNString(4,  "°Ô½ºÆ®");
 
-			msg.setMessage("ì—´ëŒìë¡œ ë“±ë¡ ë˜ì…¨ìŠµë‹ˆë‹¤.");
-		}
-	}
+    		pstmt.executeUpdate();//ÁØºñµÈ Äõ¸®¹®À» DB¿¡ Á¢¼ÓÇØ¼­ ½ÇÇà
+
+    		msg.setMessage("¿­¶÷ÀÚ·Î µî·Ï µÇ¼Ì½À´Ï´Ù.");
+    	}
+    }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		if (mov.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
+		// ÃÊ±â »óÅÂ°ªÀ» ¼³Á¤
+		if(mov.getManagerOrViewer() == 1) {
+			ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
 		} else {
-			msg.setMessage("ê¶Œí•œì—†ìŒ!");
+			msg.setMessage("±ÇÇÑ¾øÀ½!");
 			fullname.getScene().getWindow().hide();
 		}
 		fullname.setStyle("-fx-text-inner-color:#afbccd;");

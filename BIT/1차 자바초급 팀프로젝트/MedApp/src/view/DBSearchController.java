@@ -101,10 +101,10 @@ public class DBSearchController implements Initializable {
 
 
 		if(Singelotn.getManagerOrViewer() == 1) {
-    		ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
+    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
     	}
     	else {
-    		ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
+    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
     	}
 
 		if(Singelotn.getSearchText().equals(""))
@@ -144,6 +144,7 @@ public class DBSearchController implements Initializable {
 
 
     	colName.setCellValueFactory(new PropertyValueFactory<Medicine, String>("name"));
+//    	imageCol.setCellValueFactory(new PropertyValueFactory<Medicine, ImageView>("image"));
     	colCharacter.setCellValueFactory(new PropertyValueFactory<Medicine, String>("character"));
     	colEffect.setCellValueFactory(new PropertyValueFactory<Medicine, String>("effect"));
     	colWarning.setCellValueFactory(new PropertyValueFactory<Medicine, String>("warning"));

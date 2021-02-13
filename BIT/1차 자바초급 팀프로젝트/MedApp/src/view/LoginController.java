@@ -23,72 +23,79 @@ import model.DBConnect;
 
 public class LoginController {
 
-	@FXML
-	private AnchorPane anPane;
+    @FXML
+    private AnchorPane anPane;
 
-	@FXML
-	private JFXTextField tfEmail;
+    @FXML
+    private JFXTextField tfEmail;
 
-	@FXML
-	private JFXPasswordField tfPass;
+    @FXML
+    private JFXPasswordField tfPass;
 
-	@FXML
-	private JFXButton btnRegister;
+    @FXML
+    private JFXButton btnRegister;
 
-	@FXML
-	private JFXButton btnLogin;
+    @FXML
+    private JFXButton btnLogin;
 
-	Message msg = new Message();
-	DBConnect connect = new DBConnect();
-	Connection conn;
-	PreparedStatement pstmt;
-	ResultSet rs;
+    Message msg = new Message();
+    DBConnect connect = new DBConnect();
+    Connection conn;
+    PreparedStatement pstmt;
+    ResultSet rs;
 
-	@FXML
-	void createLogin(ActionEvent event) throws SQLException, IOException {
-		CSingelton mov = CSingelton.getInstance();
-		String sql = "SELECT*FROM userdata WHERE id=? AND password=?";
-		pstmt = mov.getDBConnect().prepareStatement(sql);
-		pstmt.setNString(1, tfEmail.getText());
-		pstmt.setNString(2, tfPass.getText());
+    @FXML
+    void createLogin(ActionEvent event) throws SQLException, IOException {
+        CSingelton mov = CSingelton.getInstance();
+    	//System.out.println("·Î±×ÀÎ ÆäÀÌÁö·Î");
+    	/*if(tfEmail.getText().equals("")) {
+    		mgs.setMessage("ÀÌ¸§ ¹ÌÀÔ·Â!");    	}*/
+    	//DB¿¡ ÀÌ¸ŞÀÏ°ú ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¿© ·Î±×ÀÎ °¡´É ¶Ç´Â ºÒ°¡
+    	String sql = "SELECT*FROM userdata WHERE id=? AND password=?";
+    	pstmt = mov.getDBConnect().prepareStatement(sql);
+    	pstmt.setNString(1,  tfEmail.getText());
+    	pstmt.setNString(2,  tfPass.getText());
 
-		rs = pstmt.executeQuery();
+    	rs = pstmt.executeQuery(); //execute Äõ¸®´Â ½°ú°ªÀÌ ÀÖ°í update´Â ¾ø´Ù.
 
-		boolean LoginSucess = false;
-		if (rs.next()) {
-			if (tfEmail.getText().equals(rs.getNString("id"))
-					&& tfPass.getText().equals(rs.getNString("PASSWORD"))) {
-				if (rs.getNString("permit").equals("ê´€ë¦¬ì")) {
-					mov.setManagerOrViewer(1);
-				}
-				LoginSucess = true;
-			}
-			if (LoginSucess == true) {
-				btnLogin.getScene().getWindow().hide();
-				Stage home = new Stage();
-				Parent root = FXMLLoader.load(
-						getClass().getResource("../view/Main_KimtaeHeon.fxml"));
-				Scene scene = new Scene(root);
-				home.setScene(scene);
-				home.show();
-				msg.setMessage("Success!");
-			}
-		} else {
-			msg.setMessage("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤.");
+        boolean LoginSucess = false;
+    	if(rs.next()) {
+    		//msg.setMessage("Success!");
+    		//ÇöÀç Ã¢À» ´İ´Â´Ù.
+    		if(tfEmail.getText().equals(rs.getNString("id")) &&
+    				tfPass.getText().equals(rs.getNString("PASSWORD"))) {
+    			if(rs.getNString("permit").equals("°ü¸®ÀÚ")) {
+    				mov.setManagerOrViewer(1);
+    			}
+        		LoginSucess = true;
+    		}
+    		if(LoginSucess == true) {
+        		btnLogin.getScene().getWindow().hide();
+        		//·Î±×ÀÎ ¼º°ø ÈÄ È¨ÆäÀÌÁö¿­±â
+        		Stage home = new Stage();
+            	Parent root = FXMLLoader.load(getClass().getResource("../view/Main_KimtaeHeon.fxml"));
+        		Scene scene = new Scene(root);
+        		home.setScene(scene);
+        		home.show();
+        		msg.setMessage("Success!");
+    		}
+    	}
+    	else {
+    		msg.setMessage("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ Àß¸øµÇ¾ú½À´Ï´Ù.");
 
-		}
-	}
+    	}
+    }
 
-	@FXML
-	void createregister(ActionEvent event) throws IOException {
-		btnRegister.getScene().getWindow().hide();
+    @FXML
+    void createregister(ActionEvent event) throws IOException {
+    		//System.out.println("°¡ÀÔ ÆäÀÌÁö·Î");
+    	btnRegister.getScene().getWindow().hide(); //ÇöÀç ÆäÀÌÁö¸¦ ¾Èº¸ÀÌ°Ô
 
-		Stage signup = new Stage();
-		Parent root = FXMLLoader
-				.load(getClass().getResource("../view/SignUp.fxml"));
+    	Stage signup = new Stage();
+    	Parent root = FXMLLoader.load(getClass().getResource("../view/SignUp.fxml"));
 		Scene scene = new Scene(root);
 		signup.setScene(scene);
 		signup.show();
-	}
+    }
 
 }

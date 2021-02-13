@@ -5,9 +5,9 @@ public class UserData {
 	private String id;
 	private String password;
 	private String permit;
-
+	
 	public UserData(String name, String id, String password, String permit) {
-
+		
 		this.name = name;
 		this.id = id;
 		this.password = password;

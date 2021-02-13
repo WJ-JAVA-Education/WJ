@@ -18,7 +18,7 @@
          <image>
             <Image url="@../img/team01-01.jpg" />
          </image></ImageView>
-      <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="-47.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/croppedLogo.gif" />
          </image>

@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
@@ -16,7 +17,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("TEAM01 ver 1.0");
 			primaryStage.show();
-		} catch (Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}

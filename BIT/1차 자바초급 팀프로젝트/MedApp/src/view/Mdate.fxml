@@ -27,15 +27,15 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></JFXButton>
-      <Label fx:id="Today" alignment="CENTER" layoutX="516.0" layoutY="246.0" prefHeight="55.0" prefWidth="249.0" text="현재시간" textFill="#c75643">
+      <Label fx:id="Today" alignment="CENTER" layoutX="516.0" layoutY="255.0" prefHeight="55.0" prefWidth="249.0" text="현재시간" textFill="#c75643">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
-      <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="-47.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="400.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/3Dlogo(hires).gif" />
          </image>
       </ImageView>
-      <Label fx:id="ManagerOrViewer" layoutX="7.0" layoutY="3.0" prefHeight="22.0" prefWidth="175.0" />
+      <Label fx:id="ManagerOrViewer" layoutX="14.0" layoutY="73.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

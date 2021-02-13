@@ -21,66 +21,65 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.CSingelton;
 
-public class MdateController implements Initializable {
-	@FXML
-	private Label ManagerOrViewer;
-	@FXML
-	private Label Today;
-	@FXML
-	private TableView<Medicine> medicine;
-	@FXML
-	private TableColumn<Medicine, String> colName;
-	@FXML
-	private TableColumn<Medicine, Date> colExpiration;
-	@FXML
-	private JFXButton btnHome;
+public class MdateController implements Initializable{
+@FXML
+private Label ManagerOrViewer;
+ @FXML
+ private Label Today;
+ @FXML
+ private TableView<Medicine> medicine;
+ @FXML
+ private TableColumn<Medicine, String> colName;
+ @FXML
+ private TableColumn<Medicine, Date> colExpiration;
+ @FXML
+ private JFXButton btnHome;
 
-	CSingelton mov = CSingelton.getInstance();
+ CSingelton mov = CSingelton.getInstance();
 
-	public ObservableList<Medicine> getMedicineList() {
-		ObservableList<Medicine> medicineList = FXCollections
-				.observableArrayList();
+ public ObservableList<Medicine> getMedicineList(){
+		ObservableList<Medicine> medicineList = FXCollections.observableArrayList();
 		String sql = "SELECT name,(expiration) FROM medicine m where m.expiration < sysdate+10 minus select name,expiration from medicine where sysdate > expiration";
+
 
 		Statement stmt;
 		ResultSet rs;
 		try {
-			stmt = mov.getDBConnect().createStatement(); // ì¿¼ë¦¬ ê°ì²´ ìƒì„±
-			rs = stmt.executeQuery(sql); // ì ‘ì†ëœ DBì—ì„œ ì¿¼ë¦¬ë¥¼ ì‹¤í–‰í•˜ê³  ê²°ê³¼ë¥¼ ë¦¬í„´
+			stmt = mov.getDBConnect().createStatement();  //Äõ¸® °´Ã¼ »ı¼º
+			rs = stmt.executeQuery(sql);		//Á¢¼ÓµÈ DB¿¡¼­ Äõ¸®¸¦ ½ÇÇàÇÏ°í °á°ú¸¦ ¸®ÅÏ
 			Medicine medicine;
-			while (rs.next()) {
-				medicine = new Medicine(rs.getString("name"),
-						rs.getDate("expiration"));
+			while(rs.next()) {
+				medicine = new Medicine(rs.getString("name"), rs.getDate("expiration"));
 				medicineList.add(medicine);
 			}
 		} catch (Exception e) {
-			System.out.println("DBì—ì„œ sqlë¬¸ì„ ì‹¤í–‰ë¶ˆê°€: " + e);
+			System.out.println("DB¿¡¼­ sql¹®À» ½ÇÇàºÒ°¡: "+e);
 		}
 		return medicineList;
 	}
-	public void showMedicine() {
+ 	public void showMedicine() {
 		ObservableList<Medicine> list = getMedicineList();
 		medicine.setItems(list);
-		colName.setCellValueFactory(
-				new PropertyValueFactory<Medicine, String>("name"));
-		colExpiration.setCellValueFactory(
-				new PropertyValueFactory<Medicine, Date>("expiration"));
+		colName.setCellValueFactory(new PropertyValueFactory<Medicine, String>("name"));
+		colExpiration.setCellValueFactory(new PropertyValueFactory<Medicine, Date>("expiration"));
 	}
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		if (mov.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ê´€ë¦¬ì");
-		} else {
-			ManagerOrViewer.setText("ë¡œê·¸ì¸ ì •ë³´ : ì—´ëŒì");
+
+		@Override
+		public void initialize(URL location, ResourceBundle resources) {
+			if(mov.getManagerOrViewer() == 1) {
+	    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : °ü¸®ÀÚ");
+	    	}
+	    	else {
+	    		ManagerOrViewer.setText("·Î±×ÀÎ Á¤º¸ : ¿­¶÷ÀÚ");
+	    	}
+			showMedicine();
+			SimpleDateFormat Date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String strDate = Date.format(System.currentTimeMillis());
+			Today.setText(strDate);
 		}
-		showMedicine();
-		SimpleDateFormat Date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String strDate = Date.format(System.currentTimeMillis());
-		Today.setText(strDate);
-	}
-	@FXML
-	void handleButton(ActionEvent event) {
-		btnHome.getScene().getWindow().hide();
-	}
+	    @FXML
+	    void handleButton(ActionEvent event) {
+	    	btnHome.getScene().getWindow().hide();
+	    }
 }

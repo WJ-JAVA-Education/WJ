@@ -1,8 +1,18 @@
 package view;
 
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.Team01;
+import model.UserData;
+
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -11,16 +21,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
+
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+
+import javafx.scene.control.TableColumn;
 import model.CSingelton;
-import model.UserData;
+import model.Medicine;
 
 public class HomePageController implements Initializable {
+	@FXML
+	private JFXTextField email;
 
 	@FXML
 	private JFXTextField password;
@@ -33,7 +43,8 @@ public class HomePageController implements Initializable {
 
 	@FXML
 	private TableView<UserData> tvTeam01;
-
+	@FXML
+	private TableColumn<UserData, String> colEmail;
 	@FXML
 	private TableColumn<UserData, String> colPass;
 	@FXML
@@ -42,16 +53,22 @@ public class HomePageController implements Initializable {
 	private TableColumn<UserData, String> colHost;
 
 	@FXML
+	private Button btnInsert;
+	@FXML
 	private Button btnUpdate;
 	@FXML
 	private Button btnDelete;
 
 	CSingelton Singelton = CSingelton.getInstance();
 
+	// ¹öÆ°À» ´­·¶À»¶§ ( 3°³ ÀÎ¼­Æ®, ¾÷µ¥ÀÌÆ®, µô·¹ÀÌÆ® )
 	@FXML
 	public void handelButton(ActionEvent event) {
-
-		if (event.getSource() == btnUpdate) {
+		// System.out.println("¹öÆ°À» ´­·¶À½!");
+		// showBooks();
+		if (event.getSource() == btnInsert) { // btnInsert ¹öÆ°À» ´­·¶À»¶§!!!
+			insertRow();
+		} else if (event.getSource() == btnUpdate) {
 			updateRow();
 		} else if (event.getSource() == btnDelete) {
 			deleteRow();
@@ -59,25 +76,28 @@ public class HomePageController implements Initializable {
 
 		showTeam01();
 	}
+	// 2. booksÅ×ÀÌºíÀÇ ¸ğµç ³»¿ëÀ» ¹Ş¾Æ¿Â´Ù. ÀÌ¶§ Å×ÀÌºíºä¿¡ ÀÔ·ÂÇÏ±â À§ÇØ¼­ observablelist¸¦ »ç¿ë
 	public ObservableList<UserData> getTeam01List() {
-		ObservableList<UserData> team01List = FXCollections
-				.observableArrayList();
-		String sql = "SELECT * FROM Userdata";
-		Connection conn = Singelton.getDBConnect();
-		Statement stmt;
-		ResultSet rs;
+		// fx¿¡¼­ Å×ÀÌºíºä¿¡ Ç¥½ÃÇÏ±â À§ÇÑ ¸®½ºÆ®·Î ObservableList »ç¿ë
+		ObservableList<UserData> team01List = FXCollections.observableArrayList();
+		// sql ÀÛ¼º
+		String sql = "SELECT * FROM Userdata ORDER BY id";
+		Connection conn = Singelton.getDBConnect(); // À§¿¡¼­ ¸¸µç DB¿¬°á ¸Ş¼Òµå
+		Statement stmt; // DB¿¡ º¸³¾ Äõ¸® °´Ã¼ ¼±¾ğ
+		ResultSet rs; // DB¿¡¼­ ¹Ş¾Æ¿À´Â °á°ú°´Ã¼ ¼±¾ğ
 
 		try {
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery(sql);
+			stmt = conn.createStatement(); // Äõ¸® °´Ã¼ »ı¼º
+			rs = stmt.executeQuery(sql); // Á¢¼ÓµÈ DB¿¡¼­ Äõ¸®¸¦ ½ÇÇàÇÏ°í °á°ú¸¦ ¸®ÅÏ
+			// °á°ú¸¦ ÇÑ Çà¾¿ ÀĞ¾î¼­ bookList¿¡¼­ ÀÔ·Â
 			UserData team01;
 			while (rs.next()) {
-				team01 = new UserData(rs.getString("name"), rs.getString("id"),
-						rs.getString("password"), rs.getString("permit"));
-				team01List.add(team01);
+				team01 = new UserData(rs.getString("name"), rs.getString("id"), rs.getString("password"),
+						rs.getString("permit"));
+				team01List.add(team01); // ºÏ¸®½ºÆ®¿¡ ÇÏ³ªÀÇ book°´Ã¼¸¦ ÀÔ·ÂÇÑ´Ù.
 			}
 		} catch (Exception e) {
-			System.out.println("DBì—ì„œ sqlë¬¸ì„ ì‹¤í–‰ë¶ˆê°€: " + e);
+			System.out.println("DB¿¡¼­ sql¹®À» ½ÇÇàºÒ°¡: " + e);
 		}
 
 		return team01List;
@@ -85,30 +105,38 @@ public class HomePageController implements Initializable {
 
 	public void showTeam01() {
 		ObservableList<UserData> list = getTeam01List();
+		// Å×ÀÌºíºä¿¡ ¸®½ºÆ®¸¦ ³Ö°í
 		tvTeam01.setItems(list);
-		colPass.setCellValueFactory(
-				new PropertyValueFactory<UserData, String>("id"));
-		colFname.setCellValueFactory(
-				new PropertyValueFactory<UserData, String>("password"));
-		colHost.setCellValueFactory(
-				new PropertyValueFactory<UserData, String>("permit"));
+		// °¢°¢ÀÇ ¿­¿¡ µ¥ÀÌÅÍ¸¦ ºÒ·¯¿À´Â ÄÚµå¸¦ ÀÛ¼º
+		colEmail.setCellValueFactory(new PropertyValueFactory<UserData, String>("name"));
+		colPass.setCellValueFactory(new PropertyValueFactory<UserData, String>("id"));
+		colFname.setCellValueFactory(new PropertyValueFactory<UserData, String>("password"));
+		colHost.setCellValueFactory(new PropertyValueFactory<UserData, String>("permit"));
 
 	}
 
 	@Override
 	public void initialize(java.net.URL location, ResourceBundle resources) {
+		// ÇÁ·Î±×·¥ ½ÇÇà½Ã ¾Æ·¡ ³»¿ëÀÌ ½ÇÇàµÊ
 		showTeam01();
+		// ¸¶¿ì½º·Î Å×ÀÌºí¼¿À» Å¬¸¯½Ã ±× ÇàÀÇ ³»¿ëÀÌ ´Ù¸£¸é ÀÌº¥Æ®¸¦ ¹ß»ıÇÑ´Ù.
 		tvTeam01.getSelectionModel().selectedItemProperty().addListener(
+				// Å×ÀÌºí¾ÈÀÇ ³»¿ëÁß ÇàÀÌ ÇÏ³ªÀÇ book°´Ã¼ÀÌ°í ´Ù¸¥ ÇàÀ» ¼±ÅÃ(¸¶¿ì½ºÅ¬¸¯½Ã)
+				// ±×Àü Çà°ú ´Ù¸¦°æ¿ì ÀÌº¥Æ® ¹ß»ıÇÏ°í showBookDetails¸¦ ½ÇÇàÇÑ´Ù.
 				(obs, oldValue, newValue) -> showTeam01Details(newValue));
 	}
 
 	private void showTeam01Details(UserData team01) {
 		if (team01 != null) {
-			password.setText(team01.getId());
-			fullname.setText(team01.getPassword());
+			// ³Î°ªÀÌ ¾Æ´Ò¶§
+			email.setText(team01.getId());
+			password.setText(team01.getPassword());
+			fullname.setText(team01.getname());
 			host.setText(team01.getPermit());
 
 		} else {
+			// ³Î°ªÀÏ¶§ => ¸ğµç tf¸¦ ³»¿ëÀ» Áö¿î´Ù.
+			email.setText("");
 			password.setText("");
 			fullname.setText("");
 			host.setText("");
@@ -116,36 +144,69 @@ public class HomePageController implements Initializable {
 		}
 
 	}
+
+	// DB¿¡ ÇÑÁÙ ÀÔ·Â
+	private void insertRow() {
+		String sql = "INSERT INTO userdata VALUES(?,?,?,?)";
+
+		Connection conn = Singelton.getDBConnect();
+		PreparedStatement pstmt; // Äõ¸® °´Ã¼ ¼±¾ğ(pstmt´Â ?»ç¿ë°¡´É)
+
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email.getText());
+			pstmt.setString(2, password.getText());
+			pstmt.setString(3, fullname.getText());
+			pstmt.setString(4, host.getText());
+
+			// ÀÔ·Â ÁØºñµÊ
+			pstmt.executeUpdate(); // ¸®ÅÏ°ªÀÌ ¾øÀ»°æ¿ì ¾÷µ¥ÀÌÆ® => ÀÎ¼­Æ® ½ÇÇà
+			conn.commit(); // ÇÑÁÙ ÀÔ·ÂÇÏ°í commitÇÑ´Ù.
+		} catch (Exception e) {
+			System.out.println("ÀÎ¼­Æ® ¿¡·¯¹ß»ı!");
+		}
+		email.setText("");
+		password.setText("");
+		fullname.setText("");
+		host.setText("");
+
+	}
+
+	// DBÀÇ ÇàÀ» ¼öÁ¤ÇÑ´Ù.
 	private void updateRow() {
 		String sql = "UPDATE UserData SET password=?, name=?, permit=? WHERE id=?";
 
 		Connection conn = Singelton.getDBConnect();
-		PreparedStatement pstmt;
+		PreparedStatement pstmt; // Äõ¸® °´Ã¼ ¼±¾ğ(pstmt´Â ?»ç¿ë°¡´É)
 
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, password.getText());
-			pstmt.setString(2, fullname.getText());
-			pstmt.setString(3, host.getText());
-			pstmt.executeUpdate();
-			conn.commit();
+			pstmt.setString(1, password.getText()); // title
+			pstmt.setString(2, fullname.getText()); // author
+			pstmt.setString(3, host.getText()); // year
+
+			pstmt.setString(4, email.getText()); // ¾ÆÀÌµğ
+			// ÀÔ·Â ÁØºñµÊ
+			pstmt.executeUpdate(); // ¸®ÅÏ°ªÀÌ ¾øÀ»°æ¿ì ¾÷µ¥ÀÌÆ® => ¾÷µ¥ÀÌÆ® ½ÇÇà
+			conn.commit(); // ÇÑÁÙ ÀÔ·ÂÇÏ°í commitÇÑ´Ù.
 		} catch (Exception e) {
-			System.out.println("ì—…ë°ì´íŠ¸ì¤‘ ì—ëŸ¬ë°œìƒ!");
+			System.out.println("¾÷µ¥ÀÌÆ®Áß ¿¡·¯¹ß»ı!");
 		}
 	}
 
 	private void deleteRow() {
 		String sql = "DELETE FROM UserData WHERE id=?";
 		Connection conn = Singelton.getDBConnect();
-		PreparedStatement pstmt;
+		PreparedStatement pstmt; // Äõ¸® °´Ã¼ ¼±¾ğ(pstmt´Â ?»ç¿ë°¡´É)
 
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, password.getText());
-			pstmt.executeUpdate();
-			conn.commit();
+			pstmt.setString(1, email.getText()); // ¾ÆÀÌµğ
+			// ÀÔ·Â ÁØºñµÊ
+			pstmt.executeUpdate(); // ¸®ÅÏ°ªÀÌ ¾øÀ»°æ¿ì ¾÷µ¥ÀÌÆ® => »èÁ¦ ½ÇÇà
+			conn.commit(); // ÇÑÁÙ ÀÔ·ÂÇÏ°í commitÇÑ´Ù.
 		} catch (Exception e) {
-			System.out.println("ì‚­ì œì¤‘ ì—ëŸ¬ë°œìƒ!");
+			System.out.println("»èÁ¦Áß ¿¡·¯¹ß»ı!");
 		}
 	}
 
