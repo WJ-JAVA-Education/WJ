@@ -22,12 +22,13 @@ public class setExam {
 		System.out.println(flag2);
 		System.out.println(flag3); // 이미 들어있기 때문에 false 를 반환한다.
 		
+		// 불린값으로 들어온 결과를 hasnext() 로 값이 있는지 없는지 확인 후 set1 안에 있는 true 값만 송출한다.
 		Iterator<String> iter = set1.iterator();
 		while (iter.hasNext()) {
 			String str = iter.next();
 			System.out.println(str);
 		}
-		
+	
 	}
 
 }
