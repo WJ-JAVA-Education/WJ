@@ -37,6 +37,14 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+  
+	  <Resource auth="Container" 
+	   driverClassName="oracle.jdbc.OracleDriver" 
+	   maxActive="50" maxWait="1000" name="jdbc/Oracle18g" 
+	   password="1234" type="javax.sql.DataSource" 
+	   url="jdbc:oracle:thin:@localhost:1521:xe" 
+	   username="hr"/>
+  
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -60,7 +68,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 80
     -->
-    <Connector URIEncoding="EUC-KR" connectionTimeout="20000" port="80" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="80" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -153,6 +161,10 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+      <Context docBase="SpringNote" path="/springNote" reloadable="true" source="org.eclipse.jst.jee.server:SpringNote">
+      	<ResourceLink global="jdbc/Oracle18g" name="jdbc/Oracle18g" type="javax.sql.DataSource"/>
+      </Context>
+      <Context docBase="mySpring" path="/myapp" reloadable="true" source="org.eclipse.jst.jee.server:mySpring"/>
       </Host>
     </Engine>
   </Service>
