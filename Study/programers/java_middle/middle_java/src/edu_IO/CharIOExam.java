@@ -8,6 +8,9 @@ public class CharIOExam{
         System.out.println("안녕하세요. PrintWriter입니다.");
         
         BufferedReader bf = new BufferedReader(FileReader("src/javaIO/CharIOExam02.java"));
+        PrintWriter pw = new PrintWriter(new FileWriter("test.txt"));
+        
+        int data = -1;
         
         
     }
