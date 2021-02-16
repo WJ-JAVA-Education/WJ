@@ -2,10 +2,9 @@ INDEX VERSION 1.4+C:\Users\user\Documents\GitHub\WJ\BIT\Spring\.metadata\.plugin
 2636199586.index
 3402493345.index
 757424737.index
-3346556816.index
-3810155602.index
 484429835.index
-3440229719.index
-3440229719.index
+3810155602.index
 366354796.index
 3320206651.index
+2367404117.index
+2961775995.index

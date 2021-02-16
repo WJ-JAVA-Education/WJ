@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
+		<item value="com.genuitec.eclipse.code.feature:3.6.0.202007221454"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="org.aspectj:1.9.2.202002051807"/>
 		<item value="org.eclipse.ajdt:2.2.4.202002051807"/>
