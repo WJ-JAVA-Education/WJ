@@ -1,14 +1,15 @@
-x = int(input("첫번째 숫자를 입력해 주세요 : "))
-y = int(input("두번째 숫자를 입력해 주세요 : "))
-ex = input("* , / , + , - 를 입력 해 주세요")
 
-if ex == "+":
-    print(x + y)
-elif ex == "-":
-    print(x - y)
-elif ex == "*":
-    print(x * y)
-elif ex == "/":
-    print(x / y)
+"""
+양수 , 음수 판별 프로그램
+
+
+
+"""
+x = int(input("첫번째 수를 입력 해 주세요"))
+
+if (x * -1) > 0:
+    print("음수 입니다.")
+elif (x * -1) < 0:
+    print("양수 입니다.")
 else:
-    print("기호를 확인 해 주세요")
+    print('0이 아닌 다른 수를 입력 해 주세요')
