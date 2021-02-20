@@ -1,0 +1,231 @@
+$( document ).ready( function() {
+	$(".rental_wrap .img_thum li").click(function(){
+		var this_img_src = $(this).find("img").attr("src");
+		$(this).parent().find("li").each(function(){
+				$(this).removeClass("on");		
+		});
+		$(this).addClass("on");
+		$(this).parent().parent().find(".img_view img").attr("src",this_img_src);
+	});
+	
+	
+});
+
+function open_members_pop(pop_id){
+	$(".members_pop_wrap").hide();
+	$("#"+pop_id).css({"top":(($(window).height()-$("#"+pop_id).outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#"+pop_id).outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#"+pop_id).show();	
+}
+function close_members_pop(){
+	$(".members_pop_wrap").hide();
+}
+
+function open_join_pop(pop_id){
+	$(".members_pop_wrap").hide();
+	$("#"+pop_id).css({"top":(($(window).height()-$("#"+pop_id).outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#"+pop_id).outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#"+pop_id).show();	
+}
+function close_join_pop(){
+	$(".members_pop_wrap").hide();
+}
+
+function open_login_pop(pop_id){
+	$(".popup_wrap").hide();
+	$("#"+pop_id).css({"top":(($(window).height()-$("#"+pop_id).outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#"+pop_id).outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#"+pop_id).show();	
+}
+function close_login_pop(){
+	$(".popup_wrap").hide();
+}
+
+function open_bean_pop(img_no){
+	console.log(img_no);
+	$(".pop_wrap").hide();
+	$("#pop_bean_img").attr("src","../images/menu/bean_temper_pop"+img_no+".jpg");
+	
+	$("#pop_bean").css({"top":(($(window).height()-$("#pop_bean").outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#pop_bean").outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#pop_bean").show();	
+}
+function open_eng_bean_pop(img_no){
+	console.log(img_no);
+	$(".pop_wrap").hide();
+	$("#pop_bean_img_eng").attr("src","../eng/images/menu/bean_temper_pop"+img_no+".jpg");
+	
+	$("#pop_bean").css({"top":(($(window).height()-$("#pop_bean").outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#pop_bean").outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#pop_bean").show();	
+}
+function open_chi_bean_pop(img_no){
+	console.log(img_no);
+	$(".pop_wrap").hide();
+	$("#pop_bean_img_chi").attr("src","../chi/images/menu/bean_temper_pop"+img_no+".jpg");
+	
+	$("#pop_bean").css({"top":(($(window).height()-$("#pop_bean").outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#pop_bean").outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#pop_bean").show();	
+}
+function close_bean_pop(){
+	$(".pop_wrap").hide();
+}
+
+
+
+function open_labmenu_pop(pop_id){
+	$(".lab_con_pop").hide();
+	$("#"+pop_id).css({"top":(($(window).height()-$("#"+pop_id).outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#"+pop_id).outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	$("#"+pop_id).show();	
+}
+function close_labmenu_pop(){
+	$(".lab_con_pop").hide();
+}
+
+
+function ch_coffelab(ch_id){
+	$(".coffee_cate").find("li").each(function(){
+		$(this).removeClass("on");			
+	});
+	if(ch_id =="baristas"){
+		$("#coffeelab_val").val('1');
+		$(".coffee_cate").find("li:nth(0)").addClass("on");
+		$(".barista_box").css("display","none");
+		if($(window).width()>1180){
+			$(".barista_web").css("display","table");
+		}else{
+			$(".mbarista").css("display","table");
+		}
+	}else if(ch_id=="roasters"){
+		$("#coffeelab_val").val('2');
+		$(".coffee_cate").find("li:nth(1)").addClass("on");
+		$(".barista_box").css("display","none");
+		$(".roaster").css("display","table");
+	}
+}
+
+/*function select_mufe(){
+	$(".select_list").show();
+}
+function ch_mufe(mufe_year){
+	$("#mufe_select").find("a").text(mufe_year+" 뮤직페스타");
+	$(".select_list").hide();
+} */
+
+function select_culturelab(){
+	$(".select_list").show();
+}
+
+function ch_culturelab(lab_floor){
+	if(lab_floor=="B1"){culture_text = "Culture Hall";}else if(lab_floor=="1F"){  culture_text = "Culture Space"; }else{culture_text = "Culture Stage";}
+	$("#culturelab_select").find("a").html("<em>"+lab_floor+"</em> "+ culture_text);
+	$("#floor").val(lab_floor);
+	floor_culture();
+	$(".select_list").hide();
+	
+}
+
+function ch_beanist(beanist_idx){
+	$(".beanist_tab").find("li").each(function(){
+		$(this).removeClass("on");		
+	})
+	if(beanist_idx =="1"){
+		$(".beanist_tab").find("li:nth(0)").addClass("on");
+		$(".beanist_latte").hide();
+		$(".beanist_product").show();	
+		
+	}else if(beanist_idx ==2){
+		$(".beanist_tab").find("li:nth(1)").addClass("on");
+		$(".beanist_product").hide();
+		$(".beanist_latte").show();
+		
+	}
+}
+
+function ch_bean(bean){
+	$(".bean_tab").find("li").each(function(){
+		$(this).removeClass("on");		
+	});
+	var bean_m = bean -1;
+	$(".bean_tab").find("li:nth("+bean_m+")").addClass("on");
+	$(".bean_product").hide();
+	$("#bean_div"+bean).show();
+}
+
+
+function show_members(show_part){
+	$(".members_top li").each(function(){
+		$(this).removeClass("on");		
+	});
+	$("#"+show_part+"_tab").addClass("on");
+	
+	$(".members_list").hide();
+	$("#"+show_part).show();
+	
+}
+
+
+function ch_faq_tab(idx){
+	$("#faq_tab_ul li").each(function(){
+		$(this).removeClass("on");		
+	});
+	$("#faq_tab_ul").find("li:nth("+idx+")").addClass("on");
+}
+
+
+
+function ch_event_tab(idx){
+	$("#event_tab_ul li").each(function(){
+		$(this).removeClass("on");		
+	});
+	$("#event_tab_ul").find("li:nth("+idx+")").addClass("on");
+}
+
+function lab_menu(fileP, fileM){
+	$("#lab_menu_card").find(".card_pc").find("img").attr("src","/files/lab_menu/"+fileP);
+	$("#lab_menu_card").find(".card_mobile").find("img").attr("src","/files/lab_menu/"+fileM);
+
+	$("#lab_menu_card").css({"top":(($(window).height()-$("#lab_menu_card").outerHeight())/2+ $(window).scrollTop())+"px", 	"left":(($(window).width()-$("#lab_menu_card").outerWidth())/2+ $(window).scrollLeft())+"px"}); 
+	
+	$("#lab_menu_card").show();
+	$("#lab_menu_card .popup_wrap").show();
+}
+
+function lab_drink(idx,cate){
+	
+	$.ajax({
+		type: 'POST',
+		url: '../inc/ajax_brand.php?gubun=drink_'+cate+'_div&drink_idx='+idx,						
+		success: function(result) {
+			if(result=="none"){
+				console.log("오류");					
+			}else{
+				$("#drink_"+cate+"_div").html(result);				
+				$(".lb02_menu_list li").each(function(){
+					$(this).removeClass("on");
+				})
+				$("#drink_li_"+idx).addClass("on");
+			}
+		}
+	}); 
+	
+}
+
+function ch_culture_cate(c_cate){
+	$(".cult_cate ul").find("li").each(function(){
+			$(this).removeClass("on");		
+	});
+	
+	$(".con_btn").show();	
+	$("#cult_cate_val").val(c_cate);
+	$("#end_page").val(1);
+	$("#cult_list").html('');
+		end_culture();
+	if(c_cate =="movie"){
+		$(".cult_cate ul").find("li:nth(1)").addClass("on");
+	}else if(c_cate =="music"){
+		$(".cult_cate ul").find("li:nth(2)").addClass("on");
+	}else if(c_cate =="read"){
+		$(".cult_cate ul").find("li:nth(3)").addClass("on");
+	}else if(!c_cate){
+		$(".cult_cate ul").find("li:nth(0)").addClass("on");
+	}
+}
+
+
+

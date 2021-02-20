@@ -10,9 +10,11 @@ public class ProductRepository {
 	//싱글톤 패턴
 	private static ProductRepository instance = new ProductRepository();
 	
+	
 	public static ProductRepository getInstance() {
 		return instance;  //객체 생성 대신에 getInstance
 	}
+	
 	
 	public ProductRepository() {  
 		//임의로 3개의 제품을 생성=>DB의 제품을 불러올것
@@ -40,6 +42,8 @@ public class ProductRepository {
 	
 	// 새로 등록된 제품을 DB에 저장한다.!
 	// 새로 등록된 제품을 리스트에 추가한다.
+	
+	
 	public void addProduct(Product product) {
 		listOfProducts.add(product);
 	}

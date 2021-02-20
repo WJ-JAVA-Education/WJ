@@ -1,0 +1,10 @@
+127.0.0.1 - - [05/Feb/2021:09:42:56 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [05/Feb/2021:09:43:23 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/join.jsp HTTP/1.1" 200 11704
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/css/custom.css HTTP/1.1" 200 510
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/css/bootstrap.min.css HTTP/1.1" 200 144883
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/js/bootstrap.min.js HTTP/1.1" 200 48950
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/js/jquery-3.5.1.min.js HTTP/1.1" 200 89478
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/img/logo2.jpg;jsessionid=5C983DC2D0DBD32F8822C6453F6D4871 HTTP/1.1" 200 18348
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /VapeWeb/img/logo.png;jsessionid=5C983DC2D0DBD32F8822C6453F6D4871 HTTP/1.1" 200 6939
+0:0:0:0:0:0:0:1 - - [05/Feb/2021:09:43:25 +0900] "GET /favicon.ico HTTP/1.1" 404 818
