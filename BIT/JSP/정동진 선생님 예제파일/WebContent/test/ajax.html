@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=EUC-KR">
+<title>Hello Ajax</title>
+<script type="text/javascript">
+	var xhr = null;
+	function getXMLHttpRequest(){
+		if(window.ActiveXObject){
+			try{
+				return new ActiveXObject("Msxml2.XMLHTTP");
+			}catch(e1){
+				try{
+					return new ActiveXObject("Microsoft.XMLHTTP");
+				}catch(e2){
+					return null;
+				}
+			}
+		} else if (window.XMLHttpRequest){
+			return new XMLHttpRequest();
+		} else {
+			return null;
+		}
+	} //XMLHttpRequest 객체 생성
+	
+	function requestHello(URL) {
+		param = f.id.value; //form에서 name양식의 값을 가져옴
+		URL = URL + "?id=" + param// encodeURIComponent(param); //URL에 전송한 데이터 추가
+		xhr = getXMLHttpRequest(); //객체 얻기
+		xhr.onreadystatechange = responseHello; //서버에서 응답 준비가 되면 호출할 함수(콜백함수) 등록
+		xhr.open("GET", URL, true); //연결
+		xhr.send(null); //전송
+	} //서버에 요청
+	
+	function responseHello(){
+		if(xhr.readyState == 4) {
+			if(xhr.status == 200) {
+				var str = xhr.responseText; //서버에서 보낸 내용 받기
+				document.getElementById("message").innerHTML = str; //요소 콘텐츠 변경
+			} else {
+				alert("Fail : "+ xhr.status);
+			}
+		}
+	} //응답
+</script>
+</head>
+<body>
+<form name="f">
+	<input name="id">
+	<input type="button" value="입력" onclick="requestHello('ajaxs.jsp')">
+</form>
+<div id="message"></div>
+</body>
+</html>
