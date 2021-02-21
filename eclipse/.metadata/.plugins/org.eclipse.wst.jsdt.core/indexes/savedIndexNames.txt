@@ -1,6 +1,1 @@
 INDEX VERSION 1.4+C:\Users\curon\OneDrive\¹®¼­\git\WJ\eclipse\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-211415100.index
-259125314.index
-3445964133.index
-251412240.index
-247612407.index

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: WebMarket
+Bundle-SymbolicName: WebMarket
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Automatic-Module-Name: WebMarket
+Export-Package: bundle,
+ dao,
+ dto,
+ filter,
+ mvc.controller,
+ mvc.database,
+ mvc.model

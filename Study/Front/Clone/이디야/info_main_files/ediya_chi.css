@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+/* 폰트 Weight ExL 100, L 300, R 400, M 500, B 700, H 900 */
+
+.lang_chi input,.lang_chi textarea,.lang_chi select,.lang_chi table,.lang_chi a,.lang_chi p,
+.gnb.chi .main li a,
+.gnb.chi .sub > li > a,
+.location.chi,
+.main_block01.chi a,
+.main_block02.chi h3,
+.main_block03.chi h3,
+.main_block05.chi h3,
+.main_bn.chi h2,
+.main_bn.chi p,
+.main_news.chi h2,
+.main_brochure.chi h2,
+.sub_visual.chi .visual_txt,
+.sub_visual.chi .con_tt,
+.sub_visual.chi .visual_mt,
+.intro_wrap.chi .intro_tt_s,
+.members_block.chi .title dt,
+.members_tt.chi,
+.members_list.chi,
+.members_list.chi h3.list_tt,
+.rental_app.chi .rental_app_info li a,
+.members_pop_wrap.chi .pop_top h3,
+.pro_detail.chi .detail_con h2,
+.block_new .new_pro .pro_detail.chi .detail_con h2,
+.lang_chi .bean_con_tt,
+.bean_intro.chi .bean_intro_tt,
+.mem_block01.chi dl dt,
+.lang_chi .mem_block03 .members_lv dd span,
+.lang_chi .mem_block03 .members_lv dd,
+.lang_chi .mem_block03 .guide,
+.members_block.chi .circle li dl dd span,
+.barista_box.chi li span.name,
+.lang_chi .barista_box li span.name,
+.lab_block01_pop.chi h3.name_tt em,
+.lang_chi .festa_tt,
+.lang_chi .festa_info li dt,
+.rental_app.chi .rental_app_info dt,
+.rental_app.chi .rental_app_info dd,
+.lang_chi .rental_floor .floor_info dd,
+.lang_chi .intro_tt,
+.lang_chi .block_hot .pro_detail .detail_con h2,
+.lang_chi .block_hot .pro_detail .pro_comp dt,
+.main_beanist h3,
+.dream_factory .factory_con p,
+.company_wrap .company_con h2,
+.company_wrap .company_con p{font-family:'Noto Sans SC', sans-serif;}
+.lang_chi .block_hot .pro_detail .pro_comp dt{ font-weight:400; font-size:13px;}
+
+#contentWrap.lang_chi,
+.main_block01.chi,
+.main_block02.chi,
+.main_block03.chi,
+.main_block05.chi,
+.intro_wrap.chi,
+.mem_block02.chi,
+.barista_box.chi li p,
+.lab_block01_pop.chi p.pop_txt,
+.lab_block01_pop.chi .con_list dd,
+.beanist_info.chi li dl,
+.beanist_product.chi li dl,
+.beanist_latte_pro.chi li dl
+.coffee_info.chi li dl,
+.festa_info.chi li dl,
+.festa_select.chi p,
+.coffee_box.box01.chi p,
+.coffee_box.box01.chi > li:last-child,
+.coffee_info.chi li dl{word-break:break-all;}
+
+.sitemap_list.chi .sm_tt{width:100%; float:none; padding-left:0; padding-bottom:5px;}
+.sitemap_list.chi .sm_txt{width:100%; float:none;}
+.sitemap_list.chi .sm_txt li{margin-bottom:0px;}
+.sitemap_con.chi .con_line_4 .con_line_2:nth-child(2) .sitemap_list:last-child{border-bottom:0;}
+
+.mem_block01.chi dl{height:220px;}
+.mem_block01.chi dd{width:80%; margin:auto;}
+
+/* 640px 이상 해상도 */
+@media screen and (min-width:640px){
+.beanist_info li dd,
+.festa_info li dl{word-break:normal;}
+
+.sitemap_con.chi .con_line_2:nth-child(2){border-bottom:0;}
+
+.lab_block01_pop.chi .con_list.main_bar li:nth-child(1){background:url(/images/coffee/lab_block01_icon01.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.main_bar li:nth-child(2){background:url(/images/coffee/lab_block01_icon02.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.main_bar li:nth-child(3){background:url(/images/coffee/lab_block01_icon03.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.bakery_room li:nth-child(1){background:url(/images/coffee/lab_block01_icon04.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.bakery_room li:nth-child(2){background:url(/images/coffee/lab_block01_icon05.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.bakery_room li:nth-child(3){background:url(/images/coffee/lab_block01_icon06.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.performance_bar li:nth-child(1){background:url(/images/coffee/lab_block01_icon07.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.performance_bar li:nth-child(2){background:url(/images/coffee/lab_block01_icon08.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.roasting_room li:nth-child(1){background:url(/images/coffee/lab_block01_icon09.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.roasting_room li:nth-child(2){background:url(/images/coffee/lab_block01_icon10.png) no-repeat 0 0;}
+.lab_block01_pop.chi .con_list.roasting_room li:nth-child(3){background:url(/images/coffee/lab_block01_icon11.png) no-repeat 0 0;}
+}
+
+/* 980px 이상 해상도 */
+@media screen and (min-width:980px){
+.beanist_step.chi li{height:168px; padding:62px 6% 62px;}
+
+.mem_block01.chi dl{height:275px;}
+
+.coffee_txt.chi{width:70%; margin:0 auto 60px;}
+}
+
+/* 1180px 이상 해상도 */
+@media screen and (min-width:1180px){
+.gnb.chi nav:hover:after{height:250px;}
+.gnb.chi .main li a{padding:0 50px;}
+.gnb.chi .main li:last-child a{padding:0 0 0 50px;}
+.gnb.chi .sub > li > a{padding:0 0; margin-left:50px;}
+.gnb.chi .sub > li a:last-child{padding:0 0;}
+.gnb.chi .main > li:nth-child(3) .sub > li,
+.gnb.chi .main > li:nth-child(4) .sub > li{width:200%;}
+
+.bean_map_box.chi{height:240px;}
+
+.sub_visual.chi .visual_mt{letter-spacing:0;}
+.sub_visual.chi h1.con_tt span.pc_tt{display:none !important;}
+
+.sitemap_con.chi .con_line_4{border-bottom:0;}
+
+.rental_app.chi .rental_app_info dl{width:32%; margin:0 4% 0 0;}
+.rental_app.chi .rental_app_info dd em{font-size:16px;}
+}
