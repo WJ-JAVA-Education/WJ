@@ -1,5 +1,6 @@
-cnt = 0
+# Exam-13.py
 
+cnt = 0
 
 while True:
     score1 = int(input("첫 번째 점수 입력 : "))
