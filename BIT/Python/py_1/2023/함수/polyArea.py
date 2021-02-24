@@ -1,5 +1,8 @@
 # polyArea.py
-
+import sys
+sys.path.append('C:/Users/user/Documents/GitHub/WJ/BIT/Python/py_1/2023/함수')
+import polyArea
+dir(polyArea)
 # 모듈 생성
 
 pi = 3.14159
@@ -15,4 +18,4 @@ def cirArea(r):
 def circum(r):
   return 2*pi*r
 
-sys.path.append('C://Users/user/Documents/GitHub/WJ/BIT/Python/py_1/2023/함수')
+
