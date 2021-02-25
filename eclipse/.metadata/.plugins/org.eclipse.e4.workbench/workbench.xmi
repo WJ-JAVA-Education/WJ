@@ -539,7 +539,7 @@
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_uazUsHaNEeu-koZ2egm-wg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="newsNaver.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;newsNaver.java&quot; partName=&quot;newsNaver.java&quot; title=&quot;newsNaver.java&quot; tooltip=&quot;VapeWeb/src/Servlet/newsNaver.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/VapeWeb/src/Servlet/newsNaver.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;556&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;newsNaver.java&quot; partName=&quot;newsNaver.java&quot; title=&quot;newsNaver.java&quot; tooltip=&quot;VapeWeb/src/Servlet/newsNaver.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/VapeWeb/src/Servlet/newsNaver.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1058&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -884,7 +884,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uo7SfmrHEeuzjaoDjn8Ocw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ynkxx3Z6Eeu-koZ2egm-wg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uo-XZWrHEeuzjaoDjn8Ocw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_zBbgUHc3Eeu81MhT16wNrw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uo-XZWrHEeuzjaoDjn8Ocw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uo7Si2rHEeuzjaoDjn8Ocw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -897,7 +897,10 @@
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_uo7SkmrHEeuzjaoDjn8Ocw" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_zeLCkHZ6Eeu-koZ2egm-wg">
+      <children xsi:type="menu:ToolBar" xmi:id="_1aGA0Hc3Eeu81MhT16wNrw">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_zeLCkHZ6Eeu-koZ2egm-wg" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_0lD9sHZwEeuDPNC7ZldcRQ" visible="false">
@@ -933,7 +936,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uo74AWrHEeuzjaoDjn8Ocw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ynkx1HZ6Eeu-koZ2egm-wg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uo-XDGrHEeuzjaoDjn8Ocw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_zBgY0Hc3Eeu81MhT16wNrw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uo-XDGrHEeuzjaoDjn8Ocw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uo74D2rHEeuzjaoDjn8Ocw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
