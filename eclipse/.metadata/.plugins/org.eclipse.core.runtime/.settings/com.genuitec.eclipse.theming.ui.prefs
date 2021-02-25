@@ -1,11 +1,12 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1607625304000
 codemix.dont.show.upsell.until=1614041392779
-configurationInstallLocation=/C\:/Users/user/Desktop/eclipse d12/eclipse/
+configurationInstallLocation=/C\:/Spring/eclipse d12/eclipse/
 eclipse.preferences.version=1
+elearning.dont.show.until=1615186683860
 iconcolormode=primary
-last.download.attempt.time=1613924498471
-lastConfiguration=1613924480986
+last.download.attempt.time=1614155534383
+lastConfiguration=1614155529586
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray
