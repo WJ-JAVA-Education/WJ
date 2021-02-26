@@ -1,0 +1,44 @@
+강좌사이트 : Lecture
+1.STS에서 프로젝트 import
+(General/Existing Projects into Workspace)
+
+2.webapp/table.sql <- mysql에서 테이블 생성
+(WEB-INF/spring/root-context.xml에서 DB 정보)
+
+3.webapp/main.jsp 실행
+(server.xml에서 Lecture(path=/controller) 추가)
+
+4.기능 
+ - 회원가입
+ - 강의만들기
+ - 토픽만들기
+
+5.자바코드 분석
+ - controller
+ - domain : ~VO(Benas or DTO)
+ - persistence 
+ - service
+ - resources / *Mapper.xml (SQL문)
+------------------------------------------
+6.호출 프로세스 (회원가입)
+UserController.java (userJoin) ->
+UserServiceImpl.java (insert) ->
+UserDAOImpl.java (insert) ->
+userMapper.xml (id="insert")
+
+7.추가기능
+ - 로그인
+ - 메일 보내기
+ 
+
+
+
+
+
+
+
+
+
+
+
+
