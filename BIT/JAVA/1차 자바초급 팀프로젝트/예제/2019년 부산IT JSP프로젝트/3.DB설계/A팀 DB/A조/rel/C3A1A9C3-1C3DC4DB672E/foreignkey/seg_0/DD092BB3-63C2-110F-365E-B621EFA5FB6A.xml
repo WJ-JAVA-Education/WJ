@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DD092BB3-63C2-110F-365E-B621EFA5FB6A" containerWithKeyObject="0FB8A1A9-A92F-6E5A-8C34-023EC6BD47A6" localFKIndex="93CBB14D-EFCF-986D-B404-5B0A169B4A59" name="ReplyLike_Reply_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:12:11 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<referredTableLongName>Reply</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4FD6980F-EDC9-6738-66F4-47ABAAF8568C</referredTableID>
+<keyObject>564FE7C9-B92C-E9F1-EFC2-007BB3637220</keyObject>
+<referredKeyID>564FE7C9-B92C-E9F1-EFC2-007BB3637220</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ReplayNum</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

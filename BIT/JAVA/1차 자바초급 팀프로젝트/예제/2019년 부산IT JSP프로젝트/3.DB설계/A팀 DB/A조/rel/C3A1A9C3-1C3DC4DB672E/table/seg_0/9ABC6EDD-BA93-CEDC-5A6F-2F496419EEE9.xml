@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9ABC6EDD-BA93-CEDC-5A6F-2F496419EEE9" name="BeerGrade">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:28:07 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BeerGradeNum" id="FB1A8A16-397A-7EAF-9286-271878DBBA0D">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:29:40 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BeerScore" id="6B1FAD02-7066-CE1E-26E8-D41345F269CD">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:30:09 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BeerNum" id="E66AAC24-4EF7-920B-7C62-337145C4895E">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:30:14 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83FB3BA6-3912-1C2E-100E-DC5D0C8B1798" referredColumn="1D0EE4BD-7502-9107-0387-09649C72B99B"/>
+</associations>
+</Column>
+<Column name="UserNum" id="B4D71BD7-862B-2746-7063-D5CD8FC6922A">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:30:18 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D3C472B-3ABB-1070-F51E-50035284C540" referredColumn="9217A3F8-98F2-2DED-7A0D-901F82A985FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4FAB5714-BB17-9C10-76E2-8C0A639F96C4" name="BeerGrade_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:29:40 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB1A8A16-397A-7EAF-9286-271878DBBA0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0193A70B-AC9D-969A-65E8-B9141B8DAF8F" name="BeerGrade_Beer_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:30:14 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E66AAC24-4EF7-920B-7C62-337145C4895E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C2630C4-7170-F4BC-44AD-14B75E10B55F" name="BeerGrade_User_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:30:18 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4D71BD7-862B-2746-7063-D5CD8FC6922A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

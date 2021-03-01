@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute 레이아웃</title>
+    <style>
+        #warp{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .box{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+        #crd1{
+            top: 0; left:0px;
+        }
+        #crd2{
+            top: 0; right:0px;
+        }
+        #crd3{
+            bottom: 0; left:0px;
+        }
+        #crd4{
+            bottom: 0; right:0px;
+        }
+        #crd5{
+            top: 100px; left: 100px;
+            bottom: 100px; right:100px;
+        }
+        /* 앱솔루트를 사용 할때에는 항상 상위 포지션이 relative 이여야 한다. */
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div class="box" id=crd1></div>
+        <div class="box" id=crd2></div>
+        <div class="box" id=crd3></div>
+        <div class="box" id=crd4></div>
+        <div class="box" id=crd5></div>
+    </div>
+    
+</body>
+</html>

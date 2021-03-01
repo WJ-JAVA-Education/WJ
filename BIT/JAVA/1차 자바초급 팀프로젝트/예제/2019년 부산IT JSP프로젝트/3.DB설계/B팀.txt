@@ -1,0 +1,58 @@
+CREATE TABLE Member(
+	mb_num		INT(8) AUTO_INCREMENT,
+	mb_phone 	INT(11) NOT NULL,
+	mb_pwd		INT(4) NOT NULL,
+	mb_point		INT(8) DEFAULT 0,
+	PRIMARY KEY (mb_num)
+) DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
+
+ALTER TABLE Member AUTO_INCREMENT=20190000;
+
+CREATE TABLE Product(
+	prod_num		INT(6) AUTO_INCREMENT,
+	prod_name  	VARCHAR(50) NOT NULL,
+	prod_img   	VARCHAR(50),
+	prod_ctg   	VARCHAR(30) NOT NULL,
+	prod_price 	INT(6) NOT NULL,
+	prod_kcal  	INT(4),
+	prod_coo 	VARCHAR(50),
+	PRIMARY KEY (prod_num)
+) DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
+
+ALTER TABLE Product AUTO_INCREMENT=100000;
+
+CREATE TABLE Evento (
+	ev_num		INT(4) AUTO_INCREMENT,
+	ev_name		VARCHAR(50) NOT NULL,
+	ev_end		DATE NOT NULL,
+	prod_num		INT(6) NOT NULL,
+	ev_price		INT(6) NOT NULL,
+	PRIMARY KEY (ev_num),
+	FOREIGN KEY (prod_num) REFERENCES Product(prod_num) ON DELETE CASCADE
+) DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
+
+CREATE TABLE OrderHistory(
+	oh_num		INT(4) AUTO_INCREMENT,
+	oh_status	INT(1) NOT NULL,
+	mb_num		INT(8) NOT NULL,
+	oh_date		DATE NOT NULL,
+	oh_io			ENUM('IN', 'OUT') DEFAULT 'IN',
+	oh_comment	VARCHAR(300),
+	oh_point		INT(8) DEFAULT 0,
+	PRIMARY KEY (oh_num),
+	FOREIGN KEY (mb_num) REFERENCES Member(mb_num)
+) DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
+
+CREATE TABLE Orders(
+	oh_num		INT(4) NOT NULL,
+	or_basket 	INT(2) NOT NULL,
+	prod_num 	INT(6) NOT NULL,
+	or_size		ENUM('S', 'T', 'G', 'V') DEFAULT 'S',
+	or_count		INT(2) NOT NULL,
+	or_shot		INT(1) DEFAULT 0,
+	or_whip		BOOLEAN DEFAULT FALSE,
+	or_hi			ENUM('HOT', 'ICE') DEFAULT 'HOT',
+	PRIMARY KEY (oh_num, or_basket),
+	FOREIGN KEY (oh_num) REFERENCES OrderHistory(oh_num),
+	FOREIGN KEY (prod_num) REFERENCES Product(prod_num)
+) DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;

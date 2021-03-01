@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0CC06C3-9661-850A-D7B1-783D7548754C" name="order">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:25:41 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="oNum" id="AA4F952A-1723-8689-E223-0C726927DFE5">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:26:35 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="0728F9EE-0F3F-F90C-9554-A9C1497ADDFF">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:34:15 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D48B754-D436-56D3-ABC1-1AC2820E4807" referredColumn="90BDAA45-461F-EE4F-5992-B41291FB3C9B"/>
+</associations>
+</Column>
+<Column name="cNick" id="BE211DA9-FB55-4CA6-91BC-CE19CA2EF49C">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:58:48 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cAddress" id="022B63E7-5170-9C0B-5E36-4D27E44CD9B2">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:48:43 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rName" id="CCE89233-E480-69C1-C0F0-805FFD6222A3">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:33:28 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82120FE0-E109-C7DD-A592-91DA62423952" referredColumn="42E9D809-87F7-9010-A7A3-5DFB72BAC8E9"/>
+</associations>
+</Column>
+<Column name="cPhone" id="56F7C693-781E-F919-0A98-313FAC3C8DB4">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:35:58 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mName" id="CC5E1272-4CCA-D4B2-4C6F-11872341C405">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:35:58 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oDate" id="21A06783-CA27-48E2-98C2-DAB0A763ADF4">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:37:29 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oPrice" id="4929B80B-5126-8EDA-A36D-5A04C29412CF">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:37:29 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oRequest" id="F86592D6-C214-36A1-0528-9D7B5BCD0B82">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:38:33 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orderType" id="5F9644FF-F5E8-DF01-9B17-60165AA6466A">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:38:36 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payType" id="2FCC54B6-5219-A5CD-83AE-E26487ACFF16">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:39:10 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="851F1155-08E3-6BB2-A7B2-6D4338AF6236" name="order_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:37:29 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA4F952A-1723-8689-E223-0C726927DFE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC120830-81AD-394C-3A68-CE1AA5D575BD" name="restNamev1">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:33:28 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CCE89233-E480-69C1-C0F0-805FFD6222A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3FC13685-A752-C4AE-1AF0-450E704FEB56" name="order_memberTb_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:34:15 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0728F9EE-0F3F-F90C-9554-A9C1497ADDFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

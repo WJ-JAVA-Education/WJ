@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="05946491-E271-1958-8D78-E73424D5CFD1" name="address">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:00 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="postnum" id="0C0B95C2-27B0-A202-2F34-FA0A614301BA">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:49 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="2E6B6F80-E1C2-5711-3FCF-F86CC28E2523">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:49 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gu" id="DC2E5314-465E-6AF4-39E3-69E9EE3F3FD7">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:49 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street" id="7BBC8B52-18CD-6CB0-7270-25FC8E8F11FC">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:49 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="streetnum" id="03FE6FEA-8430-6C42-7146-86DB93B4259E">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:05:49 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

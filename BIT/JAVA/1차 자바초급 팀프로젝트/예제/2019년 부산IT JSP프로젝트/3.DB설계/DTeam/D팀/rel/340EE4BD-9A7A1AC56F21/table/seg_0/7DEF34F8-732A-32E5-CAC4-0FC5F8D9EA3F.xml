@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7DEF34F8-732A-32E5-CAC4-0FC5F8D9EA3F" name="menu">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:14:22 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rName" id="42E9D809-87F7-9010-A7A3-5DFB72BAC8E9">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:15:59 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mName" id="77B590F6-13EE-1B10-A4E0-9F497776059C">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:19:00 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mPrice" id="43C5B185-82F2-E726-DA3E-3814864B61E6">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:19:00 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mInfo" id="480A8C8B-4CD1-B29D-7F4A-C805DDBD7D74">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:19:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mImg" id="A35E0C5F-BF1B-F203-DF61-29174DCF9A81">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:32:42 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mImgsize" id="CEC899DC-A468-D895-81BA-7C06B9DF00B5">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:32:42 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF5CAA8D-0A42-68E6-F285-FCEFEBB86CAE" name="menu_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:19:00 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42E9D809-87F7-9010-A7A3-5DFB72BAC8E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

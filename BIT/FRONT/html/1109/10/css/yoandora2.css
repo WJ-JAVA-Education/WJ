@@ -1,0 +1,21 @@
+﻿body{
+	font: 14px '맑은고딕';
+}
+.container{
+	position: absolute;
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid gray;
+}
+header{
+	position: relative;
+	
+}
+header h1{
+	position: absolute;
+	height: 280px;
+	color: greenyellow;
+	right: 10px;
+	
+}

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BF10BB6B-3D4B-ABDA-E8FB-7B4F2846FFCE" containerWithKeyObject="4FD6980F-EDC9-6738-66F4-47ABAAF8568C" localFKIndex="152AB9AF-C52C-14AC-80F8-E8E3B30E142F" name="Reply_ReviewBoard_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:58:31 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<referredTableLongName>ReviewBoard</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ECEDED72-942A-9CBD-C50B-3A7622F8B493</referredTableID>
+<keyObject>79F45168-8766-078D-8337-AE773F059D66</keyObject>
+<referredKeyID>79F45168-8766-078D-8337-AE773F059D66</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ReviewNum</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

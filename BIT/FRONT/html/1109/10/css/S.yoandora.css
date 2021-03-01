@@ -1,0 +1,73 @@
+*{
+    font: 맑은 고딕 14px;
+}
+#container{
+    position: absolute;
+    width: 800px;
+    height: auto;
+    border: 2px solid black;
+}
+header{
+    background-image: url(/1109/10/images/bg2.png);
+    width: 800px;
+    height: 250px;
+}
+.h1{
+    position: relative;
+    top: 150px;
+    right: 10px;
+    text-align: right;
+    color: yellowgreen;
+    float: right;
+    line-height: 10px;
+}
+header ul{
+    position: relative;
+    width: auto;
+    height: 30px;
+    bottom: -220px;
+    list-style: none;
+    background-color: black;
+    margin:0 auto;
+    
+
+}
+header ul li{
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    margin-left:50px;
+    text-align: left;
+    left: -30px;
+    font-size: 5px;
+    bottom: -2px;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+}
+.SD1{
+    position: relative;
+    float: left;
+    width: 500px;
+    height: 500px;
+    border: 0px solid black;
+}
+#img1{
+    width: 550px;
+}
+aside{
+    position: relative;
+    float: right;
+    
+    width: 200px;
+    height: 550px;
+}
+.f1{
+    position: relative;
+    width: 800px;
+    height: 200px;
+}

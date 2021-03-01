@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F326FBB3-CE71-6435-B33F-F0C2DC852A4D" name="ReReply">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 00:32:24 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ReReplyNum" id="8633355F-E5AF-F499-5686-EBBDDBE13B13">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:27:55 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReReplyComment" id="7F0F32E7-B547-8610-5F75-F6083E7CB5B9">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:27:55 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReReplyData" id="3AF6C028-2D9E-4328-50B1-B4EB456897F2">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:27:55 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReplayNum" id="A6833381-57C7-492C-2E50-F27CC94A1759">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:19:15 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1572BAE-456E-18E4-03CC-2DCF84D2D424" referredColumn="30C8CC19-A5E9-0548-D400-ADEDE6F0FB00"/>
+</associations>
+</Column>
+<Column name="UserNum" id="85D1CDFA-3613-57BE-0651-40216842488B">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:20:02 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CDCE1E98-04B4-3DA4-C443-DCEC47FBF4E9" referredColumn="9217A3F8-98F2-2DED-7A0D-901F82A985FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB43F113-2565-4954-8156-C7B36956E884" name="ReReplay_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:28:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8633355F-E5AF-F499-5686-EBBDDBE13B13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48D5F364-DD4A-D3D1-DC3C-44B5F353D104" name="ReReply_Reply_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:19:15 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6833381-57C7-492C-2E50-F27CC94A1759"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94BF8E36-C279-C132-AC75-6A8D59F31BDB" name="ReReply_User_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:20:02 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85D1CDFA-3613-57BE-0651-40216842488B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

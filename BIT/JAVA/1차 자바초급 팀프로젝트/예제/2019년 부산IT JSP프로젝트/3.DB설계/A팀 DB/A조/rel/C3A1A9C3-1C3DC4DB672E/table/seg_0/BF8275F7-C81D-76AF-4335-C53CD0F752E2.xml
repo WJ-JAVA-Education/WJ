@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF8275F7-C81D-76AF-4335-C53CD0F752E2" name="ReviewGrade">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:31:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ReviewGradeNum" id="D247E837-869A-00E7-C08A-49258945086F">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:31:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReviewScore" id="289A2B8B-EF6B-F930-625F-1CC238309AE2">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:31:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UserNum" id="B464C49D-E20F-0860-F288-DD4F94BE1780">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:33:30 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0DE5DFB9-29D3-51B3-9D42-182466BFB6B9" referredColumn="9217A3F8-98F2-2DED-7A0D-901F82A985FB"/>
+</associations>
+</Column>
+<Column name="ReviewNum" id="98E91B9E-2727-CCD5-27E3-1AE1800C921D">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:33:33 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B06681FF-1ED2-FF7C-E133-40EF5422ABCA" referredColumn="207B9691-9F05-E4FB-DE83-4F37B99343E4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="63E1694C-FBC7-FD08-8BD8-0AAD71B4AF54" name="ReviewGrade_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:31:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D247E837-869A-00E7-C08A-49258945086F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53F1B8E3-7272-4F7E-A528-54599A7F6A43" name="ReviewGrade_User_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:33:30 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B464C49D-E20F-0860-F288-DD4F94BE1780"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="95A42738-2FA8-1B71-C953-A4A983B7B9FE" name="ReviewGrade_ReviewBoard_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:33:33 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98E91B9E-2727-CCD5-27E3-1AE1800C921D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

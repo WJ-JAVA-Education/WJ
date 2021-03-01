@@ -1,0 +1,74 @@
+background-image	속성	: 배경 이미지 파일 경로 지정
+
+background-repeat	속성	: 배경이미지 반복여부 및 반복 방향지정  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ	ㅣ
+repeat		브라우저화면에 가득 찰 때까지 배경 이미지를 가로와 세로로 반복합니다.		ㅣ
+repeat-x 		브라우저 창 너비와 같아질 때까지 배경 이미지를 가로로 반복합니다.		ㅣ
+repeat-y		브라우저 창 높이와 같아질 떄까지 배경 이미지를  세로로 반복합니다.		ㅣ
+no-repeat	배경 이미지를 한 번만 표시하고 반복하지 않습니다.				ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅣ
+
+background-size		속성	: 배경 이미지 크기 조절
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+background-size : auto | contain | cover | <크기 값> | <백분율> |		ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+auto		원래 배경 이미지 크기만큼 표시됩니다.			ㅣ
+contain		요소 안 배경이미지가 다 들어오도록 확대/축소			ㅣ	
+cover		배경 이미지로 요소를 모두 덮도록 확대/축소			ㅣ
+<크기 값>	너비 값과 높이값을 지정					ㅣ
+<백분율>	원래 배경 이미지 크기를 기준으로 확대/축소			ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+background-position	속성	: 배경 이미지를 반복하지 않을 경우 , 배경 이미지를 표시할 위치 지정
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅣ
+background-position : <수평 위치> <수직 위치>;				 ㅣ
+수평 위치 : left | center | right | <백분율> | <길이 값>				ㅣ
+수직 위치 : left | center | right | <백분율> | <길이 값>				ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+background-origin	속성	: 배경 이미지를 배치하기 위한 기준 설정
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+background-origin : border-box | padding-box | content-box			ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+border-box	박스 모델의 가장 외각 테두리 (border)가 기준이 됨		ㅣ
+padding-box	박스 모델에서 테두리를 뺀 패딩 (padding) 이 기준이 됨		ㅣ
+content-box 	박스 모델에서 내용 부분이 기준이 됨.				ㅣ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+display			속성	: 블록 레벨 요소를 인라인 레벨 요소로 바꾸거나 인라인 레벨 요소를 블록 레벨 요소로 바꿈.
+display : none | contents | block | inline | inline-block | table | table-cell 등
+Display 속성 값
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+inherit		상위 요소의 display 속성을 상속받음
+table		블록 레벨의 표로 만듭니다.
+inline-table	인라인 레벨의 표를 만듭니다 (<table> 태그를 사용한 것처럼)
+table-row	표의 행으로 만듭니다. (<tr 태그> 사용한 것처럼)
+table-row-group	표의 행 그룹으로 만듭니다 (<tbody> 태그 사용한 것처럼)
+table-header-group 표의 제목 영역 (header) 그룹으로 만듭니다 (<thead> 태그 사용한 것)
+table-footer-group 표의 요약 영역 (footer) 그룹으로 만듭니다. (<tfoot> 태그 사용한 것처럼)
+table-column 	표의 열로 만듭니다. (<col> 태그 사용한 것처럼)
+table-column-group 표의 열 그룹으로 만듭니다 (<colgroup> 태그 사용한 것처럼)
+table-cell		표에서 하나의 셀로 만듭니다(<td>나 <th> 태그 사용한 것처럼)
+table-caption	표의 캡션을 만듭니다 (<caption> 태그 사용한 것처럼)
+list-item		목록의 항목을 표시 할 수 있도록 기본적인 블록 박스와 표시자 박스를 만듬 ( <li> 태그 사용한 것처럼 )	
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+border-style		속성	: 테두리를 그리기 위해서 먼저 테두리 스타일부터 지정
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+border-style : none | hidden | dashed | dotted | double | groove | inset | outset | ridge | solid
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+none		테두리가 나타나지 않음 (기본값)
+hidden		테두리가 나타나지 않으며 다른 테두리로 표시되지 않음.
+dahsed		테두리를 짧은 점선으로 표시
+dotted		테두리를 점선으로 표시
+double		테두리를 이중 (겹선) 으로 표시 .
+groove		테두리를 입체적으로
+inset		groove와 비슷
+outset		groove와 비슷
+ridge 		groove와 비슷
+solid		*실선으로 표시 *
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+border-width		속성	: 테두리 두께 지정
+border-top-width : <크기> | thin | medium | thick
+border-right-width : <크기> | thin | medium | thick
+border-bottom-width : <크기> | thin | medium | thick
+border-left-width : <크기> | thin | medium | thick
+border-width : <크기> | thin | medium | thick

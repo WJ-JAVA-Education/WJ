@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C496E5F4-072C-2A51-92ED-E64EAE6BFCE1" name="RequestBoard">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RequestBoardNum" id="D1DA72E9-E4D7-547B-0FD1-EF5C9D6D9285">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RequestBoardTitle" id="BE95702B-AFC4-6154-D345-71A110741B07">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RequestBoardComment" id="6E2998FD-7090-1933-D0F8-AEF8606C9047">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RequestBoardDate" id="6BED5636-9BF0-B884-4FCC-59AF9493C389">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RequestBoardTime" id="CFB07456-CCB5-242A-2231-F1B6E0E76F4F">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FileNum" id="3EACC88F-E82F-9E02-5A81-B972D22919A2">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:57:11 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="24B391E4-B4B9-BC7C-17DB-C1BC3ACB1A68" referredColumn="8AC48B03-0BC8-1203-70FB-8D17686B2E46"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="846BEC33-9EA5-33EF-2936-54050E3327C3" name="RequestBoard_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:56:17 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1DA72E9-E4D7-547B-0FD1-EF5C9D6D9285"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33DB57A2-882F-BD6A-C42F-D41E7AAAAEA7" name="RequestBoard_File_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:57:11 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EACC88F-E82F-9E02-5A81-B972D22919A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

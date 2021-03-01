@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D943E241-9217-DF2E-9888-D4E9C5CABB90" name="review">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:39:33 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rName" id="3D1BFEAB-502F-B56C-9D23-4C2926D73011">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:39:41 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cNick" id="2387819B-D1C8-889A-4107-A18E3BFF4040">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 07:09:53 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="871CE6C0-7C9E-AB2D-8F9E-DBD2AA9B400E">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:39:46 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rDate" id="B5911D11-4C7B-1A88-B497-13C4A011039B">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:41:48 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rContent" id="D7074A11-B737-67AD-164E-16AFA7D54757">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:41:48 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

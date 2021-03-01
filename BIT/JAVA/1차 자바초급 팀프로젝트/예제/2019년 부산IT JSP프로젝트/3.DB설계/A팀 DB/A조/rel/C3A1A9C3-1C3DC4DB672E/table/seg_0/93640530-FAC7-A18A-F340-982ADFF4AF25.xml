@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="93640530-FAC7-A18A-F340-982ADFF4AF25" name="ReviewLike">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 00:32:16 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ReviewLikeNum" id="A4C40B6B-4A0A-810B-2127-7F237C49C5ED">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:41:22 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReviewNum" id="7AB13282-760C-30E0-0F98-2B3B4C6B5EA2">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:53:08 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="535EEAAF-7338-F8CD-1EB1-3707A5208465" referredColumn="207B9691-9F05-E4FB-DE83-4F37B99343E4"/>
+</associations>
+</Column>
+<Column name="UserNum" id="47218B04-E42D-6456-B47D-F8E394D6965B">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:53:11 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91C98E15-5601-9515-8CA1-D3E50BCE5353" referredColumn="9217A3F8-98F2-2DED-7A0D-901F82A985FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24DE6840-4E5C-D55A-D5A8-400927AEB2FB" name="Like_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-04-26 01:41:22 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4C40B6B-4A0A-810B-2127-7F237C49C5ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF25CADC-1412-1CA0-D51B-7A2AFD84FF4F" name="Like_ReviewBoard_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:53:08 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AB13282-760C-30E0-0F98-2B3B4C6B5EA2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B153A008-B794-6E8B-40A0-E9B182B25956" name="Like_User_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:53:11 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47218B04-E42D-6456-B47D-F8E394D6965B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

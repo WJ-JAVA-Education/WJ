@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F106C17E-E8D0-D637-7625-B547DD25F14F" name="UserTrand">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:40:56 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="UserNum" id="68175C48-806C-B4A4-0B86-ACBA96F6EC5D">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:41:32 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52629E50-B31A-7DB1-55BD-F5A88642E24E" referredColumn="9217A3F8-98F2-2DED-7A0D-901F82A985FB"/>
+</associations>
+</Column>
+<Column name="Pilsner" id="2D6F2EA6-AFC3-34C2-DB5E-E4E5229C973D">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:41:51 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EuropeanLager" id="D5F53A20-0814-C060-7284-FED0C2BCB68E">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:43:51 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GermanLager" id="D4109380-33A8-FF65-A329-54DFA1B796BC">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:43:51 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AmericanLager" id="159788A7-9700-A751-B263-8A891636D9AF">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:15 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GermanAle" id="07C1D33C-7A88-BAC0-2984-1DDCD5729CC8">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:26 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BelgianAle" id="95F17214-FD47-6E84-34C5-8B89225B63D2">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:26 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PaleAle" id="291F81C9-D340-C805-7953-615B5633C250">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:26 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Stout" id="D4A5C8DE-0ED0-C06A-0790-017E85292465">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:26 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Porter" id="7DC6C5B6-E791-FDB7-0853-7D5F713E594D">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:26 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IrishAle" id="B40C8074-8FD2-276C-BDC0-683EBCAE87CE">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:46:55 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BrownAle" id="24A11CBC-FDE0-72AB-6610-E1A7EBC868C8">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:47:00 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18291707-18C6-26F0-8FA5-9E38219DEE23" name="UserTrand_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:41:41 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68175C48-806C-B4A4-0B86-ACBA96F6EC5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8159BD75-3F39-A872-9C39-D33D40FB10C8" name="UserTrand_User_FK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-03 05:41:32 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68175C48-806C-B4A4-0B86-ACBA96F6EC5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

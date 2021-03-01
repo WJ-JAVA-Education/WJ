@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA67719D-3233-9E50-9EA3-FF5EFC9D0691" name="Ad">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:48:40 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AdNum" id="678F3852-629C-BFDF-C7EC-E8B4DB5D8190">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:53:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AdLink" id="05565250-5673-6F86-C08E-66E57AFF66AD">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:53:22 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69218658-C57A-FA03-F6CF-6DD1BA438F3B" name="AdBrand_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 06:53:04 UTC</createdTime>
+<ownerDesignName>A조</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="678F3852-629C-BFDF-C7EC-E8B4DB5D8190"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

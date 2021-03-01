@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BDC0E7E2-0CA2-397E-E5FA-EC701DC9FD9D" name="customer">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 04:58:07 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="90BDAA45-461F-EE4F-5992-B41291FB3C9B">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:02:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pwd" id="F2E382DE-B7B6-405A-0FEE-B89D9DF28B29">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:02:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="B5B3BFC6-5F6D-9986-B89B-7EC54142CF22">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:02:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cNick" id="754CF32A-CF88-C0A9-3D56-699258F0A31C">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:58:07 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cPhone" id="CDD00673-7EC2-D946-3D81-004CA1DFBFDA">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:02:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cPost" id="42077321-00FD-6259-6AA9-3560F2C0D91C">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:04:41 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cAddress" id="515B6F3E-FD7C-7FB5-0ACE-4D27EC5BA255">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:04:41 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5D244E94-4B83-5C5E-64CE-DF851E2C3AA7" name="memberTb_PK">
+<createdBy>it</createdBy>
+<createdTime>2019-05-02 05:02:14 UTC</createdTime>
+<ownerDesignName>D팀</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90BDAA45-461F-EE4F-5992-B41291FB3C9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
