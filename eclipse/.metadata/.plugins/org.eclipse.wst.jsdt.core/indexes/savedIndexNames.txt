@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+C:\Users\user\Documents\GitHub\WJ\eclipse\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-103150180.index
-3723171232.index
-2993429985.index
-35436622.index
-1704449395.index
-3286858191.index
-1965621074.index
-4104786950.index

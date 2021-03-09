@@ -1,23 +1,16 @@
-#Mon Mar 08 00:53:01 KST 2021
+#Wed Mar 10 00:41:37 KST 2021
 \!/=
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentPrefixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentSuffixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.fieldPrefixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.fieldSuffixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.localPrefixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.localSuffixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFieldPrefixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFinalFieldPrefixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=15
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=15
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.release=disabled
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source=15
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.char=mixed
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.size=8
+/instance/org.eclipse.jdt.ui/formatter_profile=org.eclipse.jdt.ui.default.sun_profile
+/instance/org.eclipse.jdt.ui/formatter_settings_version=20
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.exception.name=e
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.formatterprofiles.version=20
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.gettersetter.use.is=true
