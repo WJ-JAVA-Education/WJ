@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,13 +16,14 @@ public class MainActivity extends AppCompatActivity {
     int num1 , num2;
     Integer result;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.example4_03);
 
-        TextView textResult = findViewById(R.id.TextResult);
+        TextView textResult = findViewById(R.id.TextResult);{
         EditText edit1 = findViewById(R.id.Edit1);
         EditText edit2 = findViewById(R.id.Edit2);
         Button btnAdd = findViewById(R.id.BtnAdd);
