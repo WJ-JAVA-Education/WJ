@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         internal var numBtnIDs = arrayOf(
                 R.id.BtnNum0,R.id.BtnNum1,R.id.BtnNum2,R.id.BtnNum3,R.id.BtnNum4,
                 R.id.BtnNum5,R.id.BtnNum6,R.id.BtnNum7,R.id.BtnNum8,R.id.BtnNum9)
-        internal var I : Int = 0 // 증가값 용도.
+        internal var i : Int = 0 // 증가값 용도.
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
