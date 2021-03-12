@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             setHours = hourOfDay
             setMin = minute
         }
-
+            // DatePicker 는 vb.datePicker1.year / vb.datePicker1.monthOfYear+1 / vb.datePicker.dayofMonth 로 불러올수있다.
         vb.endBtn.setOnLongClickListener {
             vb.tYear.setText(setYear.toString()+"년 ")
             vb.tMonth.setText(setMonth.toString()+"월 ")
@@ -69,9 +69,6 @@ class MainActivity : AppCompatActivity() {
             vb.datePicker1.visibility = View.INVISIBLE
             true
         }
-
-
-
 
     }
 }
