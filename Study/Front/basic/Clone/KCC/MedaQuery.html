@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaQuery</title>
+
+    <style>
+      body {
+        background-color: #ab47bc;
+      }
+
+      @media (max-width: 1280px) {
+        /* 화면의 너비가 0 ~ 1280px; */
+        body {
+          background-color: #42a5f5;
+        }
+      }
+      @media (max-width: 1024px) {
+        body {
+          background-color: #42a76c;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-color: #d85bae;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-color: #faa157;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MediaQuery</h1>
+  </body>
+</html>
