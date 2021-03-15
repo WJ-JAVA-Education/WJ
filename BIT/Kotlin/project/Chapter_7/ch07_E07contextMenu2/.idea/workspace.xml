@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5072380d-9a67-42f2-bb5b-31acc6cb57ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ch07_P1_optionMenu/app/src/main/res/drawable-v24/jeju1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch07_P1_optionMenu/app/src/main/res/drawable-v24/jeju2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch07_P1_optionMenu/app/src/main/res/drawable-v24/jeju3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter_6/E_6-19/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter_6/E_6-19/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter_6/E_6-19/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/app/src/main/java/com/example/e_6_19/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter_6/E_6-19/app/src/main/java/com/example/e_6_19/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter_6/E_6-19/app/src/main/java/com/example/e_6_19/MyTabFregMent.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1pmxbVd9B3jkcVkUfD7Z2f54h8B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch07_E07contextMenu" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5072380d-9a67-42f2-bb5b-31acc6cb57ab" name="Default Changelist" comment="" />
+      <created>1615802138596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615802138596</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="267" y="18" key="FileChooserDialogImpl" timestamp="1615808913188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="267" y="18" key="FileChooserDialogImpl/1920.86.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615808913188" />
+  </component>
+</project>
