@@ -6,7 +6,9 @@
         android:title="그림회전"/>
 
     <group
+        android:id="@+id/itemGroup"
         android:checkableBehavior="single">
+
         <item
             android:id="@+id/item1"
             android:title="한라산"
