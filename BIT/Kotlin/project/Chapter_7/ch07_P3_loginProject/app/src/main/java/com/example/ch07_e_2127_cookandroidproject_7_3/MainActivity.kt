@@ -13,8 +13,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
-    lateinit var tvName : TextView
-    lateinit var tvEmail : TextView
+    lateinit var tvName : EditText
+    lateinit var tvEmail : EditText
     lateinit var button1 : Button
     lateinit var dlgEdtName : EditText
     lateinit var dlgEdtEmail : EditText
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         title = "사용자 정보 입력(수정)"
 
-        tvName = findViewById<TextView>(R.id.tvName)
-        tvEmail = findViewById<TextView>(R.id.tvEmail)
+        tvName = findViewById<EditText>(R.id.tvName)
+        tvEmail = findViewById<EditText>(R.id.tvEmail)
         button1 = findViewById<Button>(R.id.button1)
 
         button1.setOnClickListener {
@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity() {
                 dlgEdtName = dialogView.findViewById<EditText>(R.id.dlgEdt1)
                 dlgEdtEmail = dialogView.findViewById<EditText>(R.id.dlgEdt2)
 
-                tvName.text = dlgEdtName.text.toString()
-                tvEmail.text = dlgEdtEmail.text.toString()
+                tvName.setText(dlgEdtName.text.toString())
+                tvEmail.setText(dlgEdtEmail.text.toString())
 
             }
 
