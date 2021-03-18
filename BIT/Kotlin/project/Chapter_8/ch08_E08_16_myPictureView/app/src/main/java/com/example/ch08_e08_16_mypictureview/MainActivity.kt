@@ -37,16 +37,16 @@ class MainActivity : AppCompatActivity() {
             if (curNum <= 0) {
                 Toast.makeText(applicationContext, "첫번째 그림입니다.", Toast.LENGTH_SHORT).show()
                 if (curNum === 0) {
-                    tv1.text = ""
+                    curNum = imageFiles!!.size-1
                 }else{
-                    tv1.text = (curNum).toString() + "/" + (imageFiles!!.size - 1)
+                    tv1.text = (curNum+1).toString() + "/" + (imageFiles!!.size)
                 }
             }else{
                 curNum--
                 imageFname = imageFiles!![curNum].toString()
                 myPicture.imagePath = imageFname
                 myPicture.invalidate()
-                tv1.text = curNum.toString()+"/"+(imageFiles!!.size-1)
+                tv1.text = (curNum+1).toString() + "/" + (imageFiles!!.size)_
             }
 
         }
