@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
             bMask = BlurMaskFilter(30f,BlurMaskFilter.Blur.NORMAL)
             paint.maskFilter = bMask
 
-            BlurMaskFilter.Blur.NORMAL
-            BlurMaskFilter.Blur.INNER
+//            BlurMaskFilter.Blur.NORMAL
+//            BlurMaskFilter.Blur.INNER
             BlurMaskFilter.Blur.OUTER
-            BlurMaskFilter.Blur.SOLID
+//            BlurMaskFilter.Blur.SOLID
 
             canvas!!.drawBitmap(picture,picX,picY,paint)
             picture.recycle()
