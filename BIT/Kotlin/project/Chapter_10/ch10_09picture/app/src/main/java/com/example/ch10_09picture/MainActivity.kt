@@ -11,7 +11,6 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        var btnFinish = findViewById<Button>(R.id.btnResult)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "명화 선호도 투표"
@@ -27,12 +26,12 @@ class MainActivity : AppCompatActivity() {
             image[i] = findViewById<ImageView>(imageID[i])
             image[i]!!.setOnClickListener {
                 voteCount[i]++
-                Toast.makeText(applicationContext,imageName[i] + ": 총 " + voteCount[i] + " 표",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,imageName[i] + ": 총 " + voteCount[i] + " 표",Toast.LENGTH_SHORT).show()
             }
         }
-
+        var btnFinish = findViewById<Button>(R.id.btnResult)
         btnFinish.setOnClickListener {
-            var intent = Intent(applicationContext,StarRatingBar::class.java)
+            var intent = Intent(this,StarRatingBar::class.java)
             intent.putExtra("VoteCount",voteCount)
             intent.putExtra("ImageName",imageName)
             startActivity(intent)

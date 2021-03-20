@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="card"
+      style="
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        position: static;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div class="card-body">
+        <div>
+          <p
+            class="card-title"
+            style="
+              width: auto;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              text-align: center;
+              margin-left: 35px;
+              margin-bottom: 5px;
+            "
+          >
+            <a href="${news.href}">${news.title}</a>
+          </p>
+        </div>
+        <div style="position: relative">
+          <p
+            class="card-text"
+            style="
+              width: auto;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              text-align: center;
+              margin-left: 35px;
+              margin-bottom: 5px;
+            "
+          >
+            <a href="${news.href}">${news.content}</a>
+          </p>
+        </div>
+        <a href="${news.href}" class="btn btn-primary">본문보기</a>
+      </div>
+    </div>
+  </body>
+</html>

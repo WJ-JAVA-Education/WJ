@@ -2,8 +2,10 @@ package com.example.ch10_09picture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RatingBar
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class StarRatingBar : AppCompatActivity() {
     lateinit var tv1: TextView
@@ -36,6 +38,9 @@ class StarRatingBar : AppCompatActivity() {
         var voteResult = intent.getIntArrayExtra("VoteCount")
         var imageName = intent.getStringArrayExtra("ImageName")
 
+        var tv = arrayOfNulls<TextView>(imageName!!.size)
+        var rbar = arrayOfNulls<RatingBar>(imageName!!.size)
+
 
         var tvID = arrayOf(
             R.id.tv1,
@@ -61,8 +66,18 @@ class StarRatingBar : AppCompatActivity() {
         )
 
         for (i in voteResult!!.indices){
-            tv[i] = findViewById<TextView>(tvID[i])
+            tv[i] =  findViewById<TextView>(tvID[i])
             rbar[i] = findViewById<RatingBar>(rbarID[i])
+        }
+
+        for (i in voteResult.indices){
+            tv[i]!!.setText(imageName[i])
+            rbar[i]!!.rating = (voteResult[i].toFloat())
+        }
+
+        var btnReturn = findViewById<Button>(R.id.btnReturn)
+        btnReturn.setOnClickListener {
+            finish()
         }
 
     }
