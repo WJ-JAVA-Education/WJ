@@ -8,39 +8,40 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <RatingBar
-        android:id="@+id/ratingBar1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <RatingBar
-        android:id="@+id/ratingBar2"
+    <Button
+        android:id="@+id/btnDial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:stepSize="1"
-        android:numStars="1"/>
-
-
-    <RatingBar
-        android:id="@+id/ratingBar3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:rating="1.5"
-        style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+        android:text="전화걸기"/>
 
     <Button
-        android:id="@+id/btnInc"
+        android:id="@+id/btnWeb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="증가시키기"/>
-
+        android:text="홈 페이지 열기"/>
 
     <Button
-        android:id="@+id/btnDec"
+        android:id="@+id/btnGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="감소시키기"/>
+        android:text="구글 맵 열기"/>
 
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구글 검색하기"/>
+
+    <Button
+        android:id="@+id/btnSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 보내기"/>
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진 찍기"/>
 
 </LinearLayout>
