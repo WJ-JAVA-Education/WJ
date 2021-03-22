@@ -31,17 +31,17 @@ body{
 }
 
 #footer {
-  display: block;
   width: 100%;
   height: 100px;
-  line-height: 100px;
-  background: #999;
+  background: #222;
   margin: 0 auto;
   padding: 0 auto;
-  float: left;
   position: absolute;
   bottom: 0px;
   left: 0px;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
 }
 
 /* 헤더 시작 */
@@ -70,7 +70,7 @@ body{
   text-align: center;
   font-size: 15px;
   display: block;
-  background: #555;
+  background: #999;
   float: left;
   margin: 0 auto;
   padding: 0 auto;
@@ -132,7 +132,7 @@ body{
   margin: 0 auto;
   padding: 20px;
 }
-
+/* 메인 공지사항 컨텐츠 */
 .bbs_contents {
   display: block;
   text-align: left;
@@ -141,4 +141,20 @@ body{
   float: left;
   margin: 0 auto;
   padding: 20px;
+}
+/*메인 게시물 컨텐츠 */
+.footer_center{
+  margin-top: 25px;
+}
+.footer_center ol{
+  text-align: center;}
+.footer_center ol li{
+  display: inline-block;
+  margin-inline: 20px;
+  margin: 0 auto;
+}
+.copyright{
+display: inline-block;
+text-align: center;
+margin: 0 auto;
 }
