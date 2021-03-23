@@ -25,8 +25,18 @@
         <!-- 헤더 로그인 -->
         <div class="header_nav">
           <ol>
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">장비소개</a></li>
+            <li><a href="#">회사소개</a>
+            <ul> <li>개요</li> <li>1</li> <li>2</li> <li>3</li> <li>4</li> </ul> </li>
+            <li><a href="#">장비소개</a>
+            <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            </ul>
+            </li>
             <li><a href="#">채용</a></li>
             <li><a href="#">공지사항</a></li>
           </ol>
@@ -37,6 +47,7 @@
     <!-- 헤더 끝 -->
     <div id="contents">
       <!-- 부트스트랩 -->
+      <!--
       <div class="img_slider">
         <div id="img_slider" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -77,6 +88,7 @@
           </a>
         </div>
       </div>
+      -->
       <!-- 부트스트랩 끝 -->
       <div id="contens2">
         <div class="notice_contents">
