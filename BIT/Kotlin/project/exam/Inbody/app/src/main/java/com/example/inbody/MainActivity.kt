@@ -50,7 +50,15 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemSelectedListener {
         spinner1.adapter = adapter_Spinner
 
         btnRes.setOnClickListener {
-            edt_cm.text.toString()
+            var str_edt = edt_cm.text.toString()
+            var str_edt2 = edt_kg.text.toString()
+            var t1 = spinner1.selectedItem.toString()
+
+            rb_woman.setOnClickListener {
+                rb_man.clearCheck()
+            }
+
+            tvG.setText(t1+"형 ")
         }
 
 
@@ -80,7 +88,6 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemSelectedListener {
             var imageview = ImageView(context)
             imageview.scaleType = ImageView.ScaleType.FIT_CENTER
             imageview.setPadding(5,5,5,5)
-            imageview.setImageResource(picId[position])
 
             return imageview
         }
@@ -102,8 +109,6 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(parent: AdapterView<*>?) {}
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        tvG = findViewById<TextView>(R.id.tvG)
-        tvG.setText(position)
         return
     }
 }
