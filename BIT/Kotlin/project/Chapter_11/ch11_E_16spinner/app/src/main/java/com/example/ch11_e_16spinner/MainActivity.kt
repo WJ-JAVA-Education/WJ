@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemSelectedListener {
 
         spinner = findViewById<Spinner>(R.id.spinner1)
         var adapter: ArrayAdapter<String>
-        adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, movieName)
+        adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item,  movieName)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
     }
