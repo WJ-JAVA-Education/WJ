@@ -1,13 +1,25 @@
 package com.word;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
+import com.word.dao.WordDao;
 import com.word.service.WordRegisterService;
 import com.word.service.WordSearchService;
 
 public class MainClass {
-
+//    @Autowired
+//    @Qualifier(value = "usedDao")
+//    WordDao wordDao;
+//    @Autowired
+//    public MainClass(WordDao wordDao) {
+//	
+//    }
+    
 	public static void main(String[] args) {
+	    
+	    
 		
 		String[] keyWords = {"c", "c++", "java", "jsp",  "spring"};
 		String[] values = {"C는 1972년 켄 톰슨과 데니스 리치가 유닉스 운영 체제에서 사용하기 위해 개발한 프로그래밍 언어이다.", 

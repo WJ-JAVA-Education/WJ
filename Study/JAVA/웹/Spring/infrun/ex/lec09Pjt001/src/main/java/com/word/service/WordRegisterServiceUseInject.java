@@ -13,7 +13,6 @@ public class WordRegisterServiceUseInject {
 	private WordDao wordDao;
 	
 	public WordRegisterServiceUseInject() {
-		
 	}
 	
 //	@Inject

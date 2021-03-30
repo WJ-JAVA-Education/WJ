@@ -6,7 +6,6 @@ import com.word.dao.WordDao;
 public class WordSearchService {
 	
 	private WordDao wordDao;
-	
 	public WordSearchService(WordDao wordDao) {
 		this.wordDao = wordDao;
 	}
