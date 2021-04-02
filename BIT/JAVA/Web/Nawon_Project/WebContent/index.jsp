@@ -15,7 +15,7 @@
 <body>
     <div id="header">
       <div class="header">
-        <!-- 헤더 시작 -->
+        <!-- 헤더 시작 0-->
         <h1>
           <a href="#"><img alt="" src="img/logo_img.jpg" /></a>
         </h1>
