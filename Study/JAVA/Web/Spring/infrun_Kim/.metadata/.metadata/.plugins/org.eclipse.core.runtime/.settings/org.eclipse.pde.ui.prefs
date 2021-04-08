@@ -1,3 +1,5 @@
+DependenciesView.show.callers=false
+DependenciesView.show.list=false
 eclipse.preferences.version=1
 editor.color.default=224,226,228
 editor.color.externalized_string=236,118,0
