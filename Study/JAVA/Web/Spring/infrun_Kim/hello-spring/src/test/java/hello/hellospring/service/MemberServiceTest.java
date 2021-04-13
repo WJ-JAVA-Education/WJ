@@ -3,10 +3,9 @@
  */
 package hello.hellospring.service;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Test.*;
 
-import org.assertj.core.api.Assert;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import hello.hellospring.domain.Member;
@@ -34,7 +33,7 @@ class MemberServiceTest {
 	
 	//then
 	memberService.findOne(saveId).get();
-	
+	assertThat(member.getName()).isEqualTo(member.getName());
     }
     
     @Test
@@ -49,9 +48,7 @@ class MemberServiceTest {
 	//when
 	
 	memberService.join(member1);	// 1까지는 정상작동
-	
-	assertThrows(IllegalStateException.class, () -> memberService.join(member2));
-	
+	assertThrow
 	
 	/*
 	 
