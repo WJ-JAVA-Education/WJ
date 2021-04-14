@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
 
@@ -33,8 +34,11 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //	return new MemoryMemberRepository();
-	return new JdbcMemberRepository(dataSource);
+//	return new JdbcMemberRepository(dataSource);
+	return new JdbcTemplateMemberRepository(dataSource);
     }
+    
+    
     
 //    처음 스프링이 올라 올 때 스프링 빈에 서비스와 레파지토리를 서비스에 넣어준다.
 }
