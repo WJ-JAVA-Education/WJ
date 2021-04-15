@@ -1,6 +1,3 @@
-/**
- * 
- */
 package hello.hellospring.service;
 
 import static org.assertj.core.api.Assertions.assertThat;

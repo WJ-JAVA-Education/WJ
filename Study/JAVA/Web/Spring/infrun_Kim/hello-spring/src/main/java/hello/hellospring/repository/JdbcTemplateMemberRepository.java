@@ -23,6 +23,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     private final JdbcTemplate jdbcTemplate;
 
     /* curong 2021. 4. 15. 오전 3:17:29 TODO -> 데이터베이스 연결을 위함 */
+    
     @Autowired
     public JdbcTemplateMemberRepository(DataSource dataSource) {
 	jdbcTemplate = new JdbcTemplate(dataSource);
@@ -32,13 +33,13 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     public Member save(Member member) {
 	/* curong 2021. 4. 15. 오전 3:10:41 TODO -> 데이터베이스에 저장하는 쿼리문 */
 
-	SimpleJdbcInsert jdjcInsert = new SimpleJdbcInsert(jdbcTemplate);
-	jdjcInsert.withTableName("member").usingGeneratedKeyColumns("id");
+	SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
+	jdbcInsert.withTableName("member").usingGeneratedKeyColumns("id");
 
 	Map<String, Object> parameters = new HashMap<>();
 	parameters.put("name", member.getName());
 
-	Number key = jdjcInsert.executeAndReturnKey(new MapSqlParameterSource(parameters));
+	Number key = jdbcInsert.executeAndReturnKey(new MapSqlParameterSource(parameters));
 	member.setId(key.longValue());
 	return member;
     }
@@ -58,7 +59,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByName(String name) {
-	List<Member> result = jdbcTemplate.query("select * from member wherename = ?", memberRowMapper(), name);
+	List<Member> result = jdbcTemplate.query("select * from member where name = ?", memberRowMapper(), name);
 			return result.stream().findAny();
     }
 

@@ -8,12 +8,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 
 /*  curong 2021. 4. 12. 오전 10:17:19  TODO 회원 서비스  */
+@Transactional
 public class MemberService {
     
     // 회원가입
