@@ -5,11 +5,19 @@
 	padding: 0 auto;
 }
 
-header{
+.header{
 	top: 0px;
 	left: 0px;
 	height: 100vh;
 	width: 280px;
 	background-color: #54B689;
 	display: block;
+}
+
+.font{
+	font-size: 200px
+}
+
+#font1{
+	font-size: 200px;
 }
