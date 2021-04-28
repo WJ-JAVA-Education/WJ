@@ -14,7 +14,7 @@ public class boardController {
 	
 	@GetMapping("test1")
 		public String test1(Model model) {
-		Object gogo = "�Ƴ��ϼ���";
+		Object gogo = "占싣놂옙占싹쇽옙占쏙옙";
 		model.addAttribute("gogo",gogo);
 		return "test1";
 	}

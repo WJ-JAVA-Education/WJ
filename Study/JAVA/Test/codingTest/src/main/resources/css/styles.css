@@ -472,7 +472,7 @@ mark,
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "?붋?;
 }
 
 .img-fluid {
