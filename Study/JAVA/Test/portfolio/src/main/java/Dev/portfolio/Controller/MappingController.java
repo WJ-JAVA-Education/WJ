@@ -20,6 +20,11 @@ public class MappingController {
 	public String CSS3() {
 		return "/skill/CSS3";
 	}
+	
+	@GetMapping("/BootStrap")
+	public String BootStrap() {
+		return "/skill/BootStrap";
+	}
 	@GetMapping("/Java")
 	public String Java() {
 		return "/skill/Java";
