@@ -1,141 +1,280 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>개발자 꿈나무 정재우입니다👍</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Clarence Taylor</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav"> 
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">정재우</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">공부</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">프로젝트</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">사용기술</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">상장</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">자격증</a></li>
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>개발자 꿈나무 정재우입니다👍</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">정재우</span>
+        <span class="d-none d-lg-block"
+          ><img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="assets/img/profile.jpg"
+            alt=""
+        /></span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">정재우</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">공부</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience"
+              >프로젝트</a
+            >
+          </li>
+          <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">사용기술</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">상장</a></li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">자격증</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+      <!-- About-->
+      <section class="resume-section" id="about">
+        <div class="resume-section-content">
+          <h1 class="mb-0">
+            Jeong
+            <span class="text-primary">Jaewoo</span>
+          </h1>
+          <div class="subheading mb-5">
+            부산광역시 남구 대연5동 못골번영로 66번길 69 상가 1층 그린유통<br />
+            <a href="mailto:curong@outlook.kr">curong@outlook.kr</a>
+          </div>
+          <p class="lead mb-3">
+            배움의 즐거움이 많은 개발자꿈나무 정재우 입니다 👍
+          </p>
+          <p class="lead mb-3">
+            저의 좌우명은 긍정적인 마음과 즐거운 마음으로 "어제의 나보다 발전된
+            오늘의 나" 라는 자세로 하루를 알차게 보내는 것입니다.
+          </p>
+          <p class="lead mb-3">
+            협업 시 경청하는 자세와 배우려는 마음으로 매사에 열심히
+            임하겠습니다.
+          </p>
+          <p class="lead mb-3">
+            맡은 일에 책임을 다하며 포기하지 않는 자세로 임하겠습니다.
+          </p>
+          <p class="lead mb-3">업무를 믿고 맡길 수 있는 사람이 되겠습니다!</p>
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.notion.so/9244b9238cdd49afa08de89bc00542a5"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="social-icon" href="https://github.com/curong"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+      <!-- Education-->
+      <section class="resume-section" id="education">
+        <div class="resume-section-content">
+          <h2 class="mb-5">공부</h2>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">BIT 부산 아이티 교육센터</h3>
+              <div class="subheading mb-3">
+                코틀린 안드로이드 & 자바 응용SW 개발자 2차
+              </div>
+              <p class="mb-0">HTML</p>
+              <p class="mb-0">CSS</p>
+              <p class="mb-0">Oracle (DB)</p>
+              <p class="mb-0">GIT</p>
+              <p class="mb-0">Java</p>
+              <p class="mb-0">
+                1차 프로젝트 "Jaset Medicine" 약국관리 프로그램
+              </p>
+              <p class="mb-0">JavaScript</p>
+              <p class="mb-0">JSP & Sevlet</p>
+              <p class="mb-0">MySQL (DB)</p>
+              <p class="mb-0">
+                2차 프로젝트 "Jaset Vape" 전자담배 전자상거래 사이트
+              </p>
+              <p class="mb-0">Spring Framework & MyBatis</p>
+              <p class="mb-0">Python & 알고리즘문제</p>
+              <p class="mb-0">Kotlin & Android</p>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Jeong
-                        <span class="text-primary">Jaewoo</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        부산광역시 남구 대연5동 못골번영로 66번길 69 상가 1층 그린유통<br>
-                        <a href="mailto:curong@outlook.kr">curong@outlook.kr</a>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2020.10.26 ~ 2021.04.28</span>
+            </div>
+          </div>
+          <!--/* 학원 교육과정 */-->
+          <!-- /* 개인 공부 */ -->
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">그 외..</h3>
+              <p class="mb-0">SpringBoot</p>
+              <p class="mb-0">Thymeleaf</p>
+              <p class="mb-0">h2 (DB)</p>
+              <p class="mb-0">Maria (DB)</p>
+              <p class="mb-0">Linux</p>
+              <p class="mb-0">JPA</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+      <!-- /* 1차 프로젝트 */-->
+      <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+          <h2 class="mb-5">프로젝트</h2>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1" id="JavaFX">
+              <h3 class="mb-0">1차 프로젝트</h3>
+              <div class="subheading mb-3">JASET Medicine</div>
+              <p>
+                JavaFX를 사용한 약국관리 프로그램 "JASET MEDICINE"
+                프로젝트입니다.
+              </p>
+              <!-- /* 모달시작 */  -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                data-whatever="@mdo"
+              >
+                1차 프로젝트
+              </button>
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        JASET Medicine
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
-                    <p class="lead mb-3">배움의 즐거움이 많은 개발자꿈나무 정재우 입니다 👍</p>
-                    <p class="lead mb-3">저의 좌우명은  긍정적인 마음과 즐거운 마음으로 "어제의 나보다 발전된 오늘의 나" 라는 자세로 하루를 알차게 보내는 것입니다.</p>
-                    <p class="lead mb-3">협업 시 경청하는 자세와 배우려는 마음으로 매사에 열심히 임하겠습니다.</p>
-                    <p class="lead mb-3">맡은 일에 책임을 다하며 포기하지 않는 자세로 임하겠습니다.</p>
-                    <p class="lead mb-3">업무를 믿고 맡길 수  있는 사람이 되겠습니다!</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.notion.so/9244b9238cdd49afa08de89bc00542a5"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/curong"><i class="fab fa-github"></i></a>
+                    <div class="modal-body">
+						<div class="mb-2"> 
+							<!-- 움짤 -->
+							<img src="https://i.ibb.co/9Nvg2r2/Medicine-Login.gif" alt="Medicine-Login">
+							<h4 class="mb-2 mt-2"> JavaFx 로그인 예시 </h4>
+						</div>
                     </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        JASET VAPE 넘어가기
+                      </button>
+                    </div>
+                  </div>
                 </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">공부</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">BIT 부산 아이티 교육센터</h3>
-                            <div class="subheading mb-3">코틀린 안드로이드 & 자바 응용SW 개발자 2차</div>
-                           		 <p class="mb-0">HTML</p>
-                           		 <p class="mb-0">CSS</p>
-                           		 <p class="mb-0">Oracle (DB)</p>
-                           		 <p class="mb-0">GIT</p>
-                           		 <p class="mb-0">Java</p>
-                           		 <p class="mb-0">1차 프로젝트 "Jaset Medicine" 약국관리 프로그램</p>
-                           		 <p class="mb-0">JavaScript</p>
-                           		 <p class="mb-0">JSP & Sevlet</p>
-                           		 <p class="mb-0">MySQL (DB)</p>
-                           		 <p class="mb-0">2차 프로젝트 "Jaset Vape" 전자담배 전자상거래 사이트</p>
-                           		 <p class="mb-0">Spring Framework & MyBatis</p>
-                           		 <p class="mb-0">Python & 알고리즘문제</p>
-                           		 <p class="mb-0">Kotlin & Android</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2020.10.26 ~ 2021.04.28</span></div>
-                    </div>
-                        <!--/* 학원 교육과정 */-->
-                    	<!-- /* 개인 공부 */ -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">그 외..</h3>
-                            <p class="mb-0">SpringBoot</p>
-                            <p class="mb-0">Thymeleaf</p>
-                            <p class="mb-0">h2 (DB)</p>
-                            <p class="mb-0">Maria (DB)</p>
-                            <p class="mb-0">Linux</p>
-                            <p class="mb-0">JPA</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- /* 1차 프로젝트 */-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">프로젝트</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1" id="JavaFX">
-                            <h3 class="mb-0">1차 프로젝트</h3>
-                            <div class="subheading mb-3">JASET Medicine</div>
-                            <p>JavaFX를 사용한 약국관리 프로그램 "JASET MEDICINE" 프로젝트입니다.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">20.12 - 개발기간 4주</span></div>
-                    </div>
-                    <!-- /* 2차프로젝트 */ -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">2차 프로젝트</h3>
-                            <div class="subheading mb-3">JASET VAPE</div>
-                            <p>JSP & Servlet을 이용한 전자담배 전자상거래 프로젝트 입니다.</p>
-                            
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">21.01 - 개발기간 5주</span></div>
-                    </div>
-                    <!-- /* 3차 프로젝트 */ -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">3차 프로젝트</h3>
-                            <div class="subheading mb-3">Web RTC를 이용한 중고나라 페이지.</div>
-                            <p>Web RTC를 이용한 중고나라 홈페이지 입니다.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">21.02 ~ 개발중</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            
-            <!-- /* Skills */-->
-            <section class="resume-section" id="skills">
+              </div>
+              <!-- 모달 끝  -->
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">20.12 - 개발기간 4주</span>
+            </div>
+          </div>
+          <!-- /* 2차프로젝트 */ -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">2차 프로젝트</h3>
+              <div class="subheading mb-3">JASET VAPE</div>
+              <p>JSP & Servlet을 이용한 전자담배 전자상거래 프로젝트 입니다.</p>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">21.01 - 개발기간 5주</span>
+            </div>
+          </div>
+          <!-- /* 3차 프로젝트 */ -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">3차 프로젝트</h3>
+              <div class="subheading mb-3">
+                Web RTC를 이용한 중고나라 페이지.
+              </div>
+              <p>Web RTC를 이용한 중고나라 홈페이지 입니다.</p>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">21.02 ~ 개발중</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- /* Skills */-->
+      <!-- <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Used Skill</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
@@ -180,33 +319,33 @@
                     </ul>
                 </div>
             </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
+            <hr class="m-0" /> -->
+      <!-- Interests-->
+      <!-- <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
                     <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
                     <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
                 </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">자격증</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>1종보통 운전면허증 🚚</li>
-                        <li>전자기기 기능사 📌</li>
-                    </ul>
-                </div>
-            </section>
+            </section> -->
+      <hr class="m-0" />
+      <!-- Awards-->
+      <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+          <h2 class="mb-5">자격증</h2>
+          <ul class="fa-ul mb-0">
+            <li>1종보통 운전면허증 🚚</li>
+            <li>전자기기 기능사 📌</li>
+          </ul>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+      </section>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
