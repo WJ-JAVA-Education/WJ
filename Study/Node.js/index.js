@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const dbUrl = 'mongodb+srv://root:1234@wooj.fynod.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const app = express();
 
-mongoose.connect('mongodb+srv://root:1234@wooj.fynod.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' , {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true , 
-    useCreateIndex: true , 
-    useFindAndModify: false
-}).then(() => console.log ("MongoDB Connected...")).catch(err => console.log(err))
-
+mongoose.connect(dbUrl,{
+  useNewUrlParser: true, 
+  useUnifiedTopology: true, 
+  useCreateIndex: true, 
+  useFindAndModify: false
+}).then(() => console.log('몽고디비 연결 성공!'))
+.catch(err => console.log(err));
 
 app.use(express.static(__dirname + '/css'));
 
