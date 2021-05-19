@@ -56,28 +56,27 @@ userSchema.pre('save', function(next){
 })
 
 userSchema.methods.comparePassword = function(plainPassword, cb){
-  //plainPassword 1234567 데이터베이스에 있는 암호화 된 비밀번호
+  // plainPassword -> "1234567" 암호화 된 비밀번호
   bcrypt.compare(plainPassword, this.password, function(err, isMatch){
-    if (err) return cb(err),
-    cb(null,isMatch)
+    if(err) return cb(err),
+    cb(null, isMatch)
   })
 }
 
 userSchema.methods.generateToken = function(cb){
-var user = this;
+  var user = this
+  // jsonwebtoken 이용해서 token 생성
 
-  // jsonwebtoken 을 이용하여 웹토큰 만들기
-  var token = jwt.sign(user._id.toHexString(),'WJTOKEN')
+  var token = jwt.sign(user._id.toHexString(), "secretToken")
 
-  // 몽고DB의 _id와 토큰을 더하여 토큰을 만들고 그 토큰을 id로 사용한다.
-  // user._id + 'secretToken' = token -> 'secretToken' -> user._id
   user.token = token
   user.save(function(err, user){
-    if(err) return cb(err),
-    cb(null,user)
+    if(err) return cb(err)
+    cb(null, user)
   })
-}
 
+
+}
 
 const User = mongoose.model('User', userSchema)
 
