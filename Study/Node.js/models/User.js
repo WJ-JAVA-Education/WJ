@@ -45,21 +45,21 @@ userSchema.pre('save', function(next){
     bcrypt.genSalt(saltRounds, function(err, salt){
       if (err) return next(err)
         bcrypt.hash(user.password, salt, function(err, hash){
-          if (err) return next(err)
+          if (err) return next(err);
           user.password = hash
-          next()
+          next();
         })
     })
   } else{
-    next() // 비밀번호가 아닌 다른 변경사항이 있을 때 다시 암호화를 하지 않도록 한다.
+    next(); // 비밀번호가 아닌 다른 변경사항이 있을 때 다시 암호화를 하지 않도록 한다.
   }
 })
 
 userSchema.methods.comparePassword = function(plainPassword, cb){
   // plainPassword -> "1234567" 암호화 된 비밀번호
   bcrypt.compare(plainPassword, this.password, function(err, isMatch){
-    if(err) return cb(err),
-    cb(null, isMatch)
+    if (err) return cb(err);
+    cb(null, isMatch);
   })
 }
 
