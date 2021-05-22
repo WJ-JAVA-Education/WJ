@@ -61,6 +61,17 @@ app.post('/login', (req, res)=>{
   })
 })
 
+app.post('/api/users',(req,res)=>{
+
+});
+
+app.post('/api/product',(req,res)=>{
+
+});
+
+app.post('/api/comment',(req,res)=>{
+  
+});
 
 
 app.get('/pet' , function(req,res){
