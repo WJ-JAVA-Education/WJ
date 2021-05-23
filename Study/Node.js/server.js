@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { User } = require("./models/User");
-const { auth } = require("./mideleware/auth");
+const { auth } = require("./middleware/auth");
 
 const config = require('./config/key');
 
@@ -65,7 +65,7 @@ app.post('/api/users/login', (req, res)=>{
 //Router <- Express를 사용하여 라우터를 사용할것
 
 
-app.get('/api/users/auth',auth ,(req,res)=>{
+app.get('/api/users/auth', auth ,(req,res)=>{
   // 여기까지 미들웨어를 통과해 왔다는 얘기는 Authentication 이 True 라는 말.
   res.status(200).json({
     _id: req.user._id,
