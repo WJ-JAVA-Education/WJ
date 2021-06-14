@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <title>(주) 포스텍</title>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Postech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<form action="/go/goAction" method="post" class="container" accept-charset="UTF-8">
+    <div class="mb-3 mt-3">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">내용</label>
+        <textarea class="form-control" row="3" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!-- SiteInfo -->
+<div class="mb-5 container-fluid">
+    <hr>
+    <p>ⓒ (주) 포스텍 . <a href="#">Privacy</a> . <a href="#">Terms</a> </p>
+</div>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
