@@ -11,9 +11,20 @@
     }
 
     .inlineTag {
-        background-color: yellow;
     }
+
+    .blockTag > div {
+        background: tomato;
+    }
+
+    .inlineTag span {
+        background: skyblue;
+    }
+        li{
+            list-style: none;
+        }
 </style>
+
 <div>
     <!-- block의 경우는 세로로 정렬 -->
     <div class="blockTag">
@@ -28,6 +39,12 @@
         <span>inline2</span>
         <span>inline3</span>
     </div>
+
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
 </div>
 </body>
 </html>
