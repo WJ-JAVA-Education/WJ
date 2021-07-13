@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlexBox</title>
+</head>
+<style>
+    html, body, h1, h2, h3, h4, h5, h6, p, blockquote {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .container{
+        display: flex;
+
+        /* flex-direction -> Flex속성의 방향을 지정 */
+        /* flex-direction 기본값은 row -> 가로 */
+        /* flex-direction colimn -> 세로 */
+        /* flex-direction revers- -> 방향이 반대로 진행 */
+        flex-direction: column;
+
+        /* flex-wrap : wrap-reverse 속성 -> 반대로 떨어지도록. */
+        /* flex-wrap : wrap 속성 -> 페이지의 칸이 줄어들면 아래로 칸을 밀어준다. */
+        flex-wrap: wrap;
+
+        /* justify-content -> direction으로 설정한 방향의 정렬의 축의 기준을 정렬해준다. */
+            /* space-between -> 좌우를 양끝에 붙혀준 후 중간을 띄워준다.*/
+            /* space-around -> 좌우를 양끝에서 살짝 띄워준 후 붙혀준 후 중간을 띄워준다.*/
+
+        justify-content: space-around;
+
+        /* align-item -> justify-content의 기준이 가로일때 align-item은 수직방향으로 축의 기준을 정렬해준다.*/
+        align-items: center;
+
+        /* align-content ->
+            1. 칸이 좁아져 박스를 밀어 낼 때 정렬
+            2. align-content의 속성이 있을경우 align-items의 속성은 적용 X
+        */
+        align-content: space-between;
+
+        height: 100vh;
+        background: lightgray;
+    }
+    .item {
+        /* flex-grow -> 빈여백의 공간을 비율로 채울 경우 사용
+            flex-grow -> 경우는 넓어질 때 일정한 비율로 넓어짐
+            flrex-shrink -> 좁아 질 때 일정한 비율로 좁아짐.
+        */
+
+
+
+        /*flex-grow: 1;*/
+
+        /* flex-basis ->
+            빈 여백을 공간을 일정하게 채워준다.
+        */
+
+        /* 기본 flex 를 사용할 경우 basis속성은 기본값이 0으로 변경된다. */
+
+        /* order -> 순서를 지정해준다. */
+
+        flex-basis: 0;
+        background: rgba(255,0,0,0.5);
+    }
+
+    .item:nth-child(1){
+        /*flex-grow: 1;*/
+        /*flex-shrink: 1;*/
+        flex: 1;
+        align-self: flex-start;
+        order : 3;
+    }
+
+    .item:nth-child(2){
+        /*flex-grow: 2;*/
+        flex: 1;
+        align-self: center;
+        order : 1;
+    }
+
+    .item:nth-child(3){
+        /*flex-grow: 1;*/
+        flex: 1;
+        align-self: flex-end;
+        order : 2;
+    }
+
+    .item:nth-child(odd) {
+        background: rgba(255,255,0,0.5);
+    }
+</style>
+<body>
+<div class="container">
+    <div class="item">
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+    </div>
+    <div class="item">
+        <p>bbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbb</p>
+    </div>
+    <div class="item">
+        <p>ccccccccccccccccc</p>
+        <p>ccccccccccccccccc</p>
+        <p>ccccccccccccccccc</p>
+    </div>
+
+</div>
+
+</body>
+</html>
