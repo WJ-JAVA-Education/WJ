@@ -1,8 +1,3 @@
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 public class Main {
     public static void main(String[] args) {
 //        Solution sol = new Solution();
@@ -13,6 +8,7 @@ public class Main {
 //        for(int i : result) {
 //            System.out.print(i + " ");
 //        }
+        /*
         Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
@@ -30,5 +26,24 @@ public class Main {
         deque.addFirst(1);
         deque.addFirst(2);
         System.out.println(deque.toString());
+         */
+        int[] arr = {13, 25, 32, 41, 53};
+
+        int temp0 = 0;
+        int temp1 = 0;
+        int[] arr2 = new int[arr.length];
+
+        for (int i = 1; i <= arr.length -1 ; i++) {
+            if (temp0 < arr[i]){
+                temp0 = arr[i];
+            } else if (temp0 > temp1) {
+                arr2[i] += temp0;
+            }
+        }
+
+        for (int i : arr2) {
+            System.out.println(i);
+        }
+
     }
 }
