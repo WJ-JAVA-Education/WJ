@@ -1,5 +1,19 @@
-var testClick = document.querySelector("test");
+var test = document.querySelector("#test");
+var button = document.querySelector("#buttonClick");
 
-testClick.addEventListener('hover', (e) => {
-    e.style.color = 'red';
-  })
+if (test != null) {
+  test.addEventListener("click", function (e) {
+    alert("확인");
+  });
+  test.addEventListener('')
+}
+
+if (button != null) {
+  button.addEventListener("click", (e) => {
+    alert("확인");
+  });
+}
+
+function checked() {
+  alert("확인");
+}

@@ -6,8 +6,11 @@
 main {
   width: 100%;
   height: 100vh;
+  border: 30px solid red;
 }
 
 #testClick{
   color: blueviolet;
+  background-color: bisque;
+  
 }
